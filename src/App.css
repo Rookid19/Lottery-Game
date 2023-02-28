@@ -4,12 +4,15 @@
 }
 .row_horizontal {
   display: flex;
+  align-items: center;
 }
 
 .button_selectors_section {
 }
 #row_name {
   width: 150px;
+  font-size: larger;
+  font-weight: 700;
 }
 .all5_container {
   display: flex;
