@@ -5,8 +5,8 @@ function Rows({ gameDescription }) {
   return (
     <div className="rows_container">
       {rows.slice(0, gameDescription.rowName.length).map((row, i) => (
-        <>
-          <div className="row_horizontal">
+        <div key={i}>
+          <div className="row_horizontal" >
             <span id="row_name">{gameDescription.rowName[i]}</span>
             <div className="button_container">
               {buttons.map((label) => (
@@ -17,7 +17,7 @@ function Rows({ gameDescription }) {
             </div>
             <div className="button_selectors_section">
               {button_selectors.map(({ id, label }) => (
-                <button className="button_selector">{label}</button>
+                <button className="button_selector" key={label}>{label}</button>
               ))}
             </div>
           </div>
@@ -39,7 +39,7 @@ function Rows({ gameDescription }) {
               </div>
             </div>
           )}
-        </>
+        </div>
       ))}
     </div>
   );
