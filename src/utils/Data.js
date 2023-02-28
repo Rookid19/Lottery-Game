@@ -42,3 +42,20 @@ export const gamesDescription = {
   },
 };
 
+export const rows = [1, 2, 3, 4, 5];
+
+export const all5GamesData = [
+  { id: 1, label: "All 5 Straight(Joint)" },
+  {
+    id: 2,
+    label: "All 5 Straight(Combo)",
+  },
+  {
+    id: 3,
+    label: "All 5 Group 120",
+  },
+  {
+    id: 4,
+    label: "All 5 Group 60",
+  },
+];
