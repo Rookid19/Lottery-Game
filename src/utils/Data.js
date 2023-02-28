@@ -58,6 +58,10 @@ export const all5GamesData = [
     id: 4,
     label: "All 5 Group 60",
   },
+  {
+    id: 5,
+    label: "All 5 Group 20",
+  },
 ];
 
 //exporting buttons label globally

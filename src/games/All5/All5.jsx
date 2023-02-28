@@ -12,7 +12,7 @@ function All5({ all5Tab, setAll5Tab }) {
           </button>
         ))}
       </div>
-      {all5Tab === 1 ? <All5Group20  /> : null}
+      {all5Tab === 5 ? <All5Group20  /> : null}
     </div>
   );
 }
