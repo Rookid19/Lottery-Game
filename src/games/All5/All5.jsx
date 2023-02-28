@@ -7,12 +7,20 @@ function All5({ all5Tab, setAll5Tab }) {
     <div className="all5_container">
       <div className="games_heading">
         {all5GamesData.map(({ id, label }) => (
-          <button key={id} onClick={() => setAll5Tab(id)}>
+          <button
+            key={id}
+            onClick={() => setAll5Tab(id)}
+            className="heading_button"
+            style={{
+              color: all5Tab === id ? "white" : "#2e99e9",
+              backgroundColor: all5Tab === id ? "#2e99e9" : "white",
+            }}
+          >
             {label}
           </button>
         ))}
       </div>
-      {all5Tab === 5 ? <All5Group20  /> : null}
+      {all5Tab === 5 ? <All5Group20 /> : null}
     </div>
   );
 }
