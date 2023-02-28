@@ -1,10 +1,11 @@
 import React from "react";
-import Row from "../../components/Row";
+import Rows from "../../components/Rows";
+import { gamesDescription } from "../../utils/Data";
 
 function All5Group20() {
   return (
     <div>
-      <Row />
+      <Rows gameDescription={gamesDescription.all5Group20} />
     </div>
   );
 }

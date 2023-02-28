@@ -1,5 +1,5 @@
 import React from "react";
-import { all5GamesData } from "../../utils/Data";
+import { all5GamesData, gamesDescription } from "../../utils/Data";
 import All5Group20 from "./All5Group20";
 
 function All5() {
@@ -10,7 +10,7 @@ function All5() {
           <button>{label}</button>
         ))}
       </div>
-      <All5Group20 />
+      <All5Group20  />
     </div>
   );
 }

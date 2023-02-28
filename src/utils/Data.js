@@ -1,19 +1,19 @@
 export const gamesDescription = {
-  all5Group30GameDescription: {
+  all5Group30: {
     name: "All 5 Group 30",
     rowName: ["One Pair", "One Number"],
     rules:
       "How to play: Select 2 One Pair & 1 One No. form 1bet. Winning No. include One No., One Pair occur 2x, as win. Win Sample：Bet plan: One Pair: 2, 8, One No.: 0, Winning No.: 2, 8, 0, 8, 2, as win.",
   },
 
-  all5Group60GameDescription: {
+  all5Group60: {
     name: "All 5 Group 60",
     rowName: ["One Pair", "One Number"],
     rules:
       "How to play: Select 1 One Pair & 3 One No. form 1bet. Winning No. include One No., One Pair occur 2x, as win. Win Sample：Bet plan: One Pair: 1, One No.: 2, 3, 4, Winning No.: 1, 2, 3, 4, 1, as win.",
   },
 
-  all5Group120GameDescription: {
+  all5Group120: {
     name: "All 5 Group 120",
     rowName: "",
     rules:
@@ -59,3 +59,6 @@ export const all5GamesData = [
     label: "All 5 Group 60",
   },
 ];
+
+//exporting buttons label globally
+export const buttons = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
