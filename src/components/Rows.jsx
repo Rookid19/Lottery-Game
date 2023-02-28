@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useRow from "../hooks/useRows";
 import { buttons, button_selectors, rows } from "../utils/Data";
+import { getCombinations } from "../utils/Formula";
 
 function Rows({ gameDescription }) {
-  const { onSelect, selectArray, selectFilter, onSelectAll } = useRow();
+  const {
+    onSelect,
+    selectArray,
+    selectFilter,
+    onSelectAll,
+    firstArray,
+    secondArray,
+  } = useRow();
   const number_of_rows = gameDescription.rowName.length;
+
   return (
     <div className="rows_container">
       {rows.slice(0, number_of_rows).map((row, i) => (
@@ -64,6 +73,7 @@ function Rows({ gameDescription }) {
           )}
         </div>
       ))}
+   
     </div>
   );
 }

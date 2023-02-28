@@ -19,7 +19,7 @@
 }
 
 .all520_container {
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 .all_clear {
   margin-left: 150px;
@@ -72,4 +72,14 @@
   margin-inline: 20px;
   background-color: #2e99e9;
   color: white;
+}
+.game_rule{
+  background-color: #f1eff8;
+  height: 50px;
+  border-radius: 20px;
+  box-shadow:-2px 2px #2e99e9;
+  padding-inline:10px ;
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 50px;
 }
