@@ -4,7 +4,7 @@ import { gamesDescription } from "../../utils/Data";
 
 function All5Group20() {
   return (
-    <div>
+    <div className="all520_container">
       <Rows gameDescription={gamesDescription.all5Group20} />
     </div>
   );

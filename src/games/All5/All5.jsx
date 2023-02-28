@@ -4,7 +4,7 @@ import All5Group20 from "./All5Group20";
 
 function All5() {
   return (
-    <div>
+    <div className="all5_container">
       <div className="games_heading">
         {all5GamesData.map(({ id, label }) => (
           <button>{label}</button>

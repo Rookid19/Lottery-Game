@@ -62,3 +62,13 @@ export const all5GamesData = [
 
 //exporting buttons label globally
 export const buttons = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+export const button_selectors = [
+    { id: 1, label: "big" },
+    { id: 2, label: "small" },
+    { id: 3, label: "odd" },
+    { id: 4, label: "even" },
+    { id: 5, label: "all" },
+    { id: 6, label: "clear" },
+  ];
+
