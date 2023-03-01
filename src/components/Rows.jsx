@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import useRow from "../hooks/useRows";
 import { buttons, button_selectors, rows } from "../utils/Data";
-import { getCombinations } from "../utils/Formula";
 
 function Rows({ gameDescription }) {
-  const {
-    onSelect,
-    selectArray,
-    selectFilter,
-    onSelectAll,
-    firstArray,
-    secondArray,
-  } = useRow();
+  const { onSelect, selectArray, selectFilter, onSelectAll, onClear } =
+    useRow();
+
   const number_of_rows = gameDescription.rowName.length;
 
   return (
@@ -63,8 +57,12 @@ function Rows({ gameDescription }) {
                 ))}
               </div>
               <div>
-                {buttons.map((label, index) => (
-                  <button key={label} className="button_all">
+                {buttons.map((label) => (
+                  <button
+                    key={label}
+                    className="button_all"
+                    onClick={() => onClear(label)}
+                  >
                     Clear
                   </button>
                 ))}
@@ -73,7 +71,6 @@ function Rows({ gameDescription }) {
           )}
         </div>
       ))}
-   
     </div>
   );
 }

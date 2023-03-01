@@ -115,6 +115,44 @@ export const RowsProvider = ({ children }) => {
     }
   };
 
+
+  /**
+    * This code defines a function onClear that takes a label parameter. The function first finds the index of the label in five different
+    * arrays firstArray, secondArray, thirdArray, fourthArray, and fifthArray. If the label is found in an array, 
+    * it is removed from that array using the splice() method. Then, the state is updated for all five arrays using the 
+    * setFirstArray(), setSecondArray(), setThirdArray(), setFourthArray(), and setFifthArray() functions with the current values of each 
+    * array passed in as the new state. This causes the component to re-render with the updated state, removing the label from the corresponding array
+   *
+   * @param {*} label
+   */
+  const onClear = (label) => {
+    const first_index = firstArray.indexOf(label);
+    const second_index = secondArray.indexOf(label);
+    const third_index = thirdArray.indexOf(label);
+    const fourth_index = fourthArray.indexOf(label);
+    const fifth_index = fifthArray.indexOf(label);
+
+    if (first_index !== -1) {
+      firstArray.splice(first_index, 1);
+    }
+    if (second_index !== -1) {
+      secondArray.splice(second_index, 1);
+    }
+    if (third_index !== -1) {
+      thirdArray.splice(third_index, 1);
+    }
+    if (fourth_index !== -1) {
+      fourthArray.splice(fourth_index, 1);
+    }
+    if (fifth_index !== -1) {
+      fifthArray.splice(fifth_index, 1);
+    }
+    setFirstArray((prev) => [...prev]);
+    setSecondArray((prev) => [...prev]);
+    setThirdArray((prev) => [...prev]);
+    setFourthArray((prev) => [...prev]);
+    setFifthArray((prev) => [...prev]);
+  };
   useEffect(() => {
     console.log("firstArray---> "+firstArray);
     console.log("secondArray---> "+secondArray);
@@ -138,7 +176,8 @@ export const RowsProvider = ({ children }) => {
       onSelect,
       selectArray,
       selectFilter,
-      onSelectAll
+      onSelectAll,
+      onClear
     }),
     [
       firstArray,
@@ -154,7 +193,8 @@ export const RowsProvider = ({ children }) => {
       onSelect,
       selectArray,
       selectFilter,
-      onSelectAll
+      onSelectAll,
+      onClear
     ]
   );
   return (
