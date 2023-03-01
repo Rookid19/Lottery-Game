@@ -159,7 +159,7 @@ export const RowsProvider = ({ children }) => {
     console.log("thirdArray----> " + thirdArray);
     console.log("fourthArray----> " + fourthArray);
     console.log("fifthArray---> "+fifthArray);
-  }, [firstArray, secondArray, thirdArray, fourthArray, firstArray]);
+  }, [firstArray, secondArray, thirdArray, fourthArray, fifthArray]);
 
   const memo_value = useMemo(
     () => ({
