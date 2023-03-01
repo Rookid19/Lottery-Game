@@ -15,7 +15,7 @@ export const gamesDescription = {
 
   all5Group120: {
     name: "All 5 Group 120",
-    rowName: "",
+    rowName: [""],
     rules:
       "How to play: Pick 5 numbers to form 1 bet, the picked numbers match the winning number (in any order) to win. Win Sample：Bet plan: 0, 2, 3, 8, 9, Winning No.: 9, 8, 0, 2, 3, as win.",
   },
