@@ -5,6 +5,7 @@ import useRow from "./hooks/useRows";
 import "./css/LotteryBall.css";
 import LotteryNumbers from "./components/LotteryNumbers";
 import { motion } from "framer-motion";
+import Timer from "./components/Timer";
 
 function App() {
   const [all5Tab, setAll5Tab] = useState(1);
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <LotteryNumbers numbers={[1, 2, 3, 4]} />
+      <Timer />
       <All5 all5Tab={all5Tab} setAll5Tab={setAll5Tab} />
     </div>
   );

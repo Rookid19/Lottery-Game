@@ -1,7 +1,7 @@
-.lottery-numbers{
-    display: flex;
-    width: 82%;
-justify-content: right;
+.lottery-numbers {
+  display: flex;
+  width: 82%;
+  /* justify-content: right; */
 }
 .lottery-ball-container {
   position: relative;
@@ -43,4 +43,15 @@ justify-content: right;
   100% {
     transform: scale(1);
   }
+}
+
+.progress_bar {
+  display: flex;
+  background-color: #5864e0;
+  height: 7px;
+  width: 280px;
+  /* margin-left: auto;  
+   margin-right: 18.5%; */
+  margin-top: 1rem;
+  border-radius: 5px;
 }

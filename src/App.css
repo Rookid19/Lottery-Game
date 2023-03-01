@@ -56,7 +56,7 @@
 }
 
 .games_heading {
-  margin-top: 10vh;
+  /* margin-top: 3vh; */
   display: flex;
 }
 
@@ -131,4 +131,20 @@
 
 #red {
   color: red;
+}
+.timer{
+  display: flex;
+  justify-content: right;
+  margin-left: auto; 
+  margin-right: 18.5%;
+}
+
+.time_remaining{
+  margin-right:40px;
+  font-size: 30px;
+  margin-top: 10px;
+  border: 1px solid #5864e0;
+  color: #5864e0;
+  width: 200px;
+  text-align: center;
 }

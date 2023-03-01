@@ -23,7 +23,7 @@ const LotteryNumber = ({ number, delay }) => {
       variants={variants}
       initial="start"
       animate="end"
-      style={{marginRight:10}}
+      style={{ marginRight: 40 }}
     >
       <div className="lottery-ball-container">
         <div className={`lottery-ball`}>
@@ -36,10 +36,15 @@ const LotteryNumber = ({ number, delay }) => {
 
 const LotteryNumbers = ({ numbers }) => {
   return (
-    <div className="lottery-numbers">
-      {numbers.map((number, index) => (
-        <LotteryNumber key={index} delay={0 * 0.1} number={number} />
-      ))}
+    <div>
+      <div 
+      className="lottery-numbers"
+      >
+        {numbers.map((number, index) => (
+          <LotteryNumber key={index} delay={index * 0.2} number={number} />
+        ))}
+      </div>
+      
     </div>
   );
 };
