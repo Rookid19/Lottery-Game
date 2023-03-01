@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { all5GamesData, gamesDescription } from "../../utils/Data";
 import All5Group20 from "./All5Group20";
+import AllStraight5Combo from "./All5StraightCombo";
 import All5StraightJoint from "./All5StraightJoint";
 
 function All5({ all5Tab, setAll5Tab }) {
@@ -21,7 +22,7 @@ function All5({ all5Tab, setAll5Tab }) {
           </button>
         ))}
       </div>
-      {all5Tab === 5 ? <All5Group20 /> : all5Tab === 1 ? <All5StraightJoint /> : null}
+      {all5Tab === 5 ? <All5Group20 /> : all5Tab === 1 ? <All5StraightJoint /> :all5Tab === 2 ? <AllStraight5Combo /> : null}
     </div>
   );
 }
