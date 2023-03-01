@@ -38,7 +38,6 @@
 .button_number:hover,
 .button_selector:hover,
 .button_all:hover {
-  /* border-color: grey; */
   color: white;
   background-color: #2e99e9;
   border: none;
@@ -73,13 +72,60 @@
   background-color: #2e99e9;
   color: white;
 }
-.game_rule{
+.game_rule {
   background-color: #f1eff8;
   height: 50px;
   border-radius: 20px;
-  box-shadow:-2px 2px #2e99e9;
-  padding-inline:10px ;
+  box-shadow: -2px 2px #2e99e9;
+  padding-inline: 10px;
   text-align: center;
   padding-top: 20px;
   margin-bottom: 50px;
+}
+.results_container {
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.5);
+  height: 70px;
+  border-radius: 10px;
+  padding-inline: 10px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+  margin-top: 40px;
+}
+
+.price_button {
+  border: none;
+  background-color: #f8f9fd;
+  height: 35px;
+  width: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.bet_amout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart_button {
+  height: 35px;
+  background-color: #5864e0;
+  color: white;
+  border: none;
+  width: 7rem;
+}
+
+#small_text {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#total_bets {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#red {
+  color: red;
 }

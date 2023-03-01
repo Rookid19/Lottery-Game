@@ -76,3 +76,5 @@ export const button_selectors = [
     { id: 6, label: "clear" },
   ];
 
+
+export const prices = [2,1, 0.2, 0.1, 0.02, 0.01, 0.002, 0.001];
