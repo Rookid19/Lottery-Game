@@ -1,7 +1,6 @@
 .lottery-numbers {
   display: flex;
   width: 82%;
-  /* justify-content: right; */
 }
 .lottery-ball-container {
   position: relative;
@@ -50,8 +49,6 @@
   background-color: #5864e0;
   height: 7px;
   width: 280px;
-  /* margin-left: auto;  
-   margin-right: 18.5%; */
   margin-top: 1rem;
   border-radius: 5px;
 }

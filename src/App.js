@@ -3,8 +3,6 @@ import "./App.css";
 import All5 from "./games/All5/All5";
 import useRow from "./hooks/useRows";
 import "./css/LotteryBall.css";
-import LotteryNumbers from "./components/LotteryNumbers";
-import { motion } from "framer-motion";
 import Timer from "./components/Timer";
 
 function App() {

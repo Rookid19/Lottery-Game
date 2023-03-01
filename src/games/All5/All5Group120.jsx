@@ -3,7 +3,7 @@ import Results from "../../components/Results";
 import Rows from "../../components/Rows";
 import useRow from "../../hooks/useRows";
 import { gamesDescription } from "../../utils/Data";
-import { getCombinations, getNumCombinations } from "../../utils/Formula";
+import {  getNumCombinations } from "../../utils/Formula";
 
 function All5Group120() {
   const { firstArray, onSelect } = useRow();
