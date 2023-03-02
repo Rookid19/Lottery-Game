@@ -7,6 +7,7 @@ function Rows({ gameDescription }) {
     useRow();
 
   const number_of_rows = gameDescription.rowName.length;
+  const columns = gameDescription.columns;
 
   return (
     <div className="rows_container">
@@ -15,7 +16,7 @@ function Rows({ gameDescription }) {
           <div className="row_horizontal">
             <span id="row_name">{gameDescription.rowName[i]}</span>
             <div className="button_container">
-              {buttons.map((label) => (
+              {buttons.slice(0, columns).map((label) => (
                 <button
                   className="button_number"
                   key={label}
@@ -43,10 +44,10 @@ function Rows({ gameDescription }) {
               ))}
             </div>
           </div>
-          {i + 1 === number_of_rows && (
+          {(i + 1 === number_of_rows && number_of_rows >1) && (
             <div className="all_clear">
               <div>
-                {buttons.map((label, index) => (
+                {buttons.slice(0, columns).map((label, index) => (
                   <button
                     key={label}
                     className="button_all"
@@ -56,8 +57,9 @@ function Rows({ gameDescription }) {
                   </button>
                 ))}
               </div>
+              
               <div>
-                {buttons.map((label) => (
+                {buttons.slice(0, columns).map((label) => (
                   <button
                     key={label}
                     className="button_all"
