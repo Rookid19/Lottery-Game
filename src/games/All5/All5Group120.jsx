@@ -15,8 +15,8 @@ function All5Group120() {
 
   return (
     <div className="all520_container">
-      <div className="game_rule">{gamesDescription.all5Group120.rules}</div>
-      <Rows gameDescription={gamesDescription.all5Group120} />
+      <div className="game_rule">{gamesDescription.all5.Group120.rules}</div>
+      <Rows gameDescription={gamesDescription.all5.Group120} />
       <Results bets={bets} />
     </div>
   );

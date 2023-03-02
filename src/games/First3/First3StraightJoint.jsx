@@ -4,37 +4,30 @@ import Rows from "../../components/Rows";
 import useRow from "../../hooks/useRows";
 import { gamesDescription } from "../../utils/Data";
 
-function AllStraight5Joint() {
-  const {
-    firstArray,
-    secondArray,
-    thirdArray,
-    fourthArray,
-    fifthArray,
-    onSelect,
-  } = useRow();
+function First3StraightJoint() {
+  const { firstArray, secondArray, thirdArray, onSelect } = useRow();
 
   const [bets, setBets] = useState("");
   const results =
     firstArray.length *
     secondArray.length *
-    thirdArray.length *
-    fourthArray.length *
-    fifthArray.length;
+    thirdArray.length 
 
-  useEffect(() => {
-    setBets(results);
-  }, [onSelect]);
-  
+    
+    useEffect(() => {
+      setBets(results);
+      console.log(results);
+    }, [onSelect]);
+
   return (
     <div className="all520_container">
       <div className="game_rule">
-        {gamesDescription.all5.StraightJoint.rules}
+        {gamesDescription.first3.StraightJoint.rules}
       </div>
-      <Rows gameDescription={gamesDescription.all5.StraightJoint} />
+      <Rows gameDescription={gamesDescription.first3.StraightJoint} />
       <Results bets={bets} />
     </div>
   );
 }
 
-export default AllStraight5Joint;
+export default First3StraightJoint;

@@ -4,10 +4,14 @@ import All5 from "./games/All5/All5";
 import useRow from "./hooks/useRows";
 import Timer from "./components/Timer";
 import { gamesGroup } from "./utils/Data";
+import Span from "./games/First3/First3";
+import First3 from "./games/First3/First3";
 
 function App() {
   const [all5Tab, setAll5Tab] = useState(1);
+  const [first3Tab,setFirst3Tab] = useState(1)
   const [groupTab, setGroupTab] = useState(1);
+
   const {
     setFirstArray,
     setSecondArray,
@@ -45,8 +49,8 @@ function App() {
       </div>
       <Timer />
       {groupTab === 1 ? (
-        <All5 all5Tab={all5Tab} setAll5Tab={setAll5Tab} />
-      ) : null}
+        <All5  all5Tab={all5Tab} setAll5Tab={setAll5Tab}/>
+      ) : <First3 first3Tab={first3Tab} setFirst3Tab={setFirst3Tab}/>}
     </div>
   );
 }

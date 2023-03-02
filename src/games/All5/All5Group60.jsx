@@ -30,8 +30,8 @@ function All5Group60() {
 
   return (
     <div className="all520_container">
-      <div className="game_rule">{gamesDescription.all5Group60.rules}</div>
-      <Rows gameDescription={gamesDescription.all5Group60} />
+      <div className="game_rule">{gamesDescription.all5.Group60.rules}</div>
+      <Rows gameDescription={gamesDescription.all5.Group60} />
       <Results bets={bets} />
     </div>
   );

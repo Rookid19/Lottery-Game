@@ -29,9 +29,9 @@ function AllStraight5Combo() {
   return (
     <div className="all520_container">
       <div className="game_rule">
-        {gamesDescription.all5StraightCombo.rules}
+        {gamesDescription.all5.StraightCombo.rules}
       </div>
-      <Rows gameDescription={gamesDescription.all5StraightCombo} />
+      <Rows gameDescription={gamesDescription.all5.StraightCombo} />
       <Results bets={bets} />
     </div>
   );
