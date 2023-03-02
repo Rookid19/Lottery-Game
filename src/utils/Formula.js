@@ -61,3 +61,16 @@ export function getCombinations(array, r) {
   generateCombos([], 0);
   return result;
 }
+
+export function generateSequence(n) {
+  let term;
+  if (n <= 10) {
+    term = (n * (n + 1)) / 2;
+  }else if(n > 10 && n < 20){
+    // let a = (n * (n + 1)) / 2;
+    // if(n === 11){
+    //   term  =a - 3
+    // }
+  }
+  return term;
+}

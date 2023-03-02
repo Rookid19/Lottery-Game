@@ -1,24 +1,26 @@
-
 import React, { useEffect, useState } from "react";
 import Results from "../../components/Results";
 import Rows from "../../components/Rows";
 import useRow from "../../hooks/useRows";
 import { gamesDescription } from "../../utils/Data";
+import { generateSequence } from "../../utils/Formula";
 
 function SumOfFirst3() {
-  const { firstArray, secondArray, thirdArray, onSelect } = useRow();
+  const { firstArray, onSelect } = useRow();
 
   const [bets, setBets] = useState("");
-  const results =
-    firstArray.length *
-    secondArray.length *
-    thirdArray.length 
 
-    
-    useEffect(() => {
-      setBets(results);
-      console.log(results);
-    }, [onSelect]);
+  const results = () => {
+    let counter = 0;
+    firstArray.forEach((number,index) => {
+      counter += generateSequence(number);
+    });
+    return counter
+  };
+
+  useEffect(() => {
+    setBets(results());
+  }, [onSelect]);
 
   return (
     <div className="all520_container">

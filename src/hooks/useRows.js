@@ -1,11 +1,4 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { buttons } from "../utils/Data";
 
 export const RowsContext = createContext({});
@@ -70,11 +63,10 @@ export const RowsProvider = ({ children }) => {
     }
   };
 
-
-  const onSelectAll = (label, index,number_of_rows) => {
+  const onSelectAll = (label, index, number_of_rows) => {
     labels.forEach((value) => {
       if (index === value) {
-        if (firstArray.indexOf(label) === -1 && index,number_of_rows >= 1) {
+        if ((firstArray.indexOf(label) === -1 && index, number_of_rows >= 1)) {
           setFirstArray((prev) => [...prev, prev === label ? null : label]);
         }
         if (secondArray.indexOf(label) === -1 && number_of_rows >= 2) {
@@ -115,13 +107,12 @@ export const RowsProvider = ({ children }) => {
     }
   };
 
-
   /**
-    * This code defines a function onClear that takes a label parameter. The function first finds the index of the label in five different
-    * arrays firstArray, secondArray, thirdArray, fourthArray, and fifthArray. If the label is found in an array, 
-    * it is removed from that array using the splice() method. Then, the state is updated for all five arrays using the 
-    * setFirstArray(), setSecondArray(), setThirdArray(), setFourthArray(), and setFifthArray() functions with the current values of each 
-    * array passed in as the new state. This causes the component to re-render with the updated state, removing the label from the corresponding array
+   * This code defines a function onClear that takes a label parameter. The function first finds the index of the label in five different
+   * arrays firstArray, secondArray, thirdArray, fourthArray, and fifthArray. If the label is found in an array,
+   * it is removed from that array using the splice() method. Then, the state is updated for all five arrays using the
+   * setFirstArray(), setSecondArray(), setThirdArray(), setFourthArray(), and setFifthArray() functions with the current values of each
+   * array passed in as the new state. This causes the component to re-render with the updated state, removing the label from the corresponding array
    *
    * @param {*} label
    */
@@ -154,11 +145,11 @@ export const RowsProvider = ({ children }) => {
     setFifthArray((prev) => [...prev]);
   };
   useEffect(() => {
-    console.log("firstArray---> "+firstArray);
-    console.log("secondArray---> "+secondArray);
+    console.log("firstArray---> " + firstArray);
+    console.log("secondArray---> " + secondArray);
     console.log("thirdArray----> " + thirdArray);
     console.log("fourthArray----> " + fourthArray);
-    console.log("fifthArray---> "+fifthArray);
+    console.log("fifthArray---> " + fifthArray);
   }, [firstArray, secondArray, thirdArray, fourthArray, fifthArray]);
 
   const memo_value = useMemo(
@@ -177,7 +168,7 @@ export const RowsProvider = ({ children }) => {
       selectArray,
       selectFilter,
       onSelectAll,
-      onClear
+      onClear,
     }),
     [
       firstArray,
@@ -194,7 +185,7 @@ export const RowsProvider = ({ children }) => {
       selectArray,
       selectFilter,
       onSelectAll,
-      onClear
+      onClear,
     ]
   );
   return (

@@ -5,6 +5,7 @@ import useRow from "./hooks/useRows";
 import Timer from "./components/Timer";
 import { gamesGroup } from "./utils/Data";
 import First3 from "./games/First3/First3";
+import { generateSequence } from "./utils/Formula";
 
 function App() {
   const [all5Tab, setAll5Tab] = useState(1);
@@ -27,8 +28,12 @@ function App() {
     setFifthArray([]);
   }, [all5Tab,first3Tab]);
 
+  const test = () =>{
+    console.log(generateSequence(11))
+  }
   return (
     <div className="App">
+    <button onClick={test}>test</button>
       <div className="group_tab">
         {gamesGroup.map(({ id, group }) => (
           <button
