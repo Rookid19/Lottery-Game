@@ -26,7 +26,7 @@ function App() {
     setThirdArray([]);
     setFourthArray([]);
     setFifthArray([]);
-  }, [all5Tab]);
+  }, [all5Tab,first3Tab]);
 
   return (
     <div className="App">

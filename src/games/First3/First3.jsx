@@ -1,5 +1,6 @@
 import React from "react";
 import { first3GamesData, gamesDescription } from "../../utils/Data";
+import First3StraightCombo from "./First3StraightCombo";
 import First3StraightJoint from "./First3StraightJoint";
 
 function First3({ first3Tab, setFirst3Tab }) {
@@ -22,7 +23,7 @@ function First3({ first3Tab, setFirst3Tab }) {
       </div>
     {first3Tab === 1 ? (
       <First3StraightJoint />
-    ):null}
+    ):first3Tab === 2 ? <First3StraightCombo />:null}
     </div>
   );
 }
