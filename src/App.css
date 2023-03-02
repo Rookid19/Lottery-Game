@@ -1,4 +1,4 @@
-.App{
+.App {
   padding-inline: 30px;
 }
 .rows_container {
@@ -131,20 +131,43 @@
 #red {
   color: red;
 }
-.timer{
+.timer {
   display: flex;
   justify-content: right;
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: 18.5%;
   margin-top: 4rem;
 }
 
-.time_remaining{
-  margin-right:40px;
+.time_remaining {
+  margin-right: 40px;
   font-size: 30px;
   margin-top: 10px;
   border: 1px solid #5864e0;
   color: #5864e0;
   width: 200px;
   text-align: center;
+}
+
+.group_tab {
+  display: flex;
+  justify-content: center;
+}
+
+.group_tab_button {
+  height: 40px;
+  width: 200px;
+  margin-right: 10px;
+  background-color: #5864e0;
+  color: white;
+  font-weight: 700;
+}
+
+.group_tab_button:hover {
+  height: 40px;
+  width: 200px;
+  margin-right: 10px;
+  background-color: white;
+  color: #5864e0;
+  border: 1px solid #5864e0;
 }

@@ -103,17 +103,16 @@ function Timer() {
   return (
     <div className="timer">
       <h3 className="time_remaining">{formatTime(timeRemaining)}</h3>
-      {/* <div> */}
-        <LotteryRandomNumbers />
-        <div className="progress_bar">
-          <div
-            style={{
-              width: `${width}%`,
-              backgroundColor: "red",
-              borderRadius: 5,
-            }}
-          ></div>
-        {/* </div> */}
+
+      <LotteryRandomNumbers />
+      <div className="progress_bar">
+        <div
+          style={{
+            width: `${width}%`,
+            backgroundColor: "red",
+            borderRadius: 5,
+          }}
+        ></div>
       </div>
     </div>
   );

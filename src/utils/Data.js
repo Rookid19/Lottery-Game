@@ -68,13 +68,17 @@ export const all5GamesData = [
 export const buttons = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export const button_selectors = [
-    { id: 1, label: "big" },
-    { id: 2, label: "small" },
-    { id: 3, label: "odd" },
-    { id: 4, label: "even" },
-    { id: 5, label: "all" },
-    { id: 6, label: "clear" },
-  ];
+  { id: 1, label: "big" },
+  { id: 2, label: "small" },
+  { id: 3, label: "odd" },
+  { id: 4, label: "even" },
+  { id: 5, label: "all" },
+  { id: 6, label: "clear" },
+];
 
+export const prices = [2, 1, 0.2, 0.1, 0.02, 0.01, 0.002, 0.001];
 
-export const prices = [2,1, 0.2, 0.1, 0.02, 0.01, 0.002, 0.001];
+export const gamesGroup = [
+  { id: 1, group: "All 5" },
+  { id: 2, group: "Span" },
+];
