@@ -3,13 +3,13 @@ import "./App.css";
 import All5 from "./games/All5/All5";
 import useRow from "./hooks/useRows";
 import Timer from "./components/Timer";
-import { gamesGroup } from "./utils/Data";
+import { buttons, gamesGroup } from "./utils/Data";
 import First3 from "./games/First3/First3";
 import { generateSequence } from "./utils/Formula";
 
 function App() {
   const [all5Tab, setAll5Tab] = useState(1);
-  const [first3Tab,setFirst3Tab] = useState(1)
+  const [first3Tab, setFirst3Tab] = useState(1);
   const [groupTab, setGroupTab] = useState(1);
 
   const {
@@ -26,14 +26,16 @@ function App() {
     setThirdArray([]);
     setFourthArray([]);
     setFifthArray([]);
-  }, [all5Tab,first3Tab]);
+  }, [all5Tab, first3Tab]);
 
-  const test = () =>{
-    console.log(generateSequence(11))
-  }
+  const test = () => {
+    const num = 9;
+    console.log(generateSequence(num))
+  
+  };
   return (
     <div className="App">
-    <button onClick={test}>test</button>
+      <button onClick={test}>test</button>
       <div className="group_tab">
         {gamesGroup.map(({ id, group }) => (
           <button
@@ -53,8 +55,10 @@ function App() {
       </div>
       <Timer />
       {groupTab === 1 ? (
-        <All5  all5Tab={all5Tab} setAll5Tab={setAll5Tab}/>
-      ) : groupTab ===2? <First3 first3Tab={first3Tab} setFirst3Tab={setFirst3Tab}/>: null}
+        <All5 all5Tab={all5Tab} setAll5Tab={setAll5Tab} />
+      ) : groupTab === 2 ? (
+        <First3 first3Tab={first3Tab} setFirst3Tab={setFirst3Tab} />
+      ) : null}
     </div>
   );
 }

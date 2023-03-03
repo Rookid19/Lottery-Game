@@ -1,3 +1,5 @@
+import { buttons } from "./Data";
+
 /**
  * The concatenateArrays function takes in an array of arrays, where each inner array contains a row of data.
  * The function then returns a string that concatenates all of the elements in the inner arrays together,
@@ -65,12 +67,12 @@ export function getCombinations(array, r) {
 export function generateSequence(n) {
   let term;
   if (n <= 10) {
-    term = (n * (n + 1)) / 2;
-  }else if(n > 10 && n < 20){
-    // let a = (n * (n + 1)) / 2;
-    // if(n === 11){
-    //   term  =a - 3
-    // }
+    let a = n + 1
+    term = (a * (a + 1)) / 2;
+  }else{
+    let a = n  - 1
+      const index = buttons.slice(17, 28).reverse().indexOf(a)
+    term = (index * (index + 1)) / 2;
   }
   return term;
 }
