@@ -29,7 +29,7 @@ function App() {
   }, [all5Tab, first3Tab]);
 
   const test = () => {
-    const num = 9;
+    const num = 16;
     console.log(generateSequence(num))
   
   };

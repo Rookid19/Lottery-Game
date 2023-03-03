@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
-import { buttons } from "../utils/Data";
+import { buttons, labels, long_labels } from "../utils/Data";
 
 export const RowsContext = createContext({});
 
@@ -10,11 +10,13 @@ export const RowsProvider = ({ children }) => {
   const [fourthArray, setFourthArray] = useState([]);
   const [fifthArray, setFifthArray] = useState([]);
 
-  const labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   const even = buttons.filter((item) => item % 2 === 0);
   const odd = buttons.filter((item) => item % 2 !== 0);
-  const small = buttons.slice(0, 5);
-  const big = buttons.slice(5, 10);
+  const small =
+    buttons.length === 10 ? buttons.slice(0, 5) : buttons.slice(0, 14);
+  const big =
+    buttons.length === 10 ? buttons.slice(5, 10) : buttons.slice(14, 28);
+  const all = buttons.length === 10 ? labels : long_labels;
 
   const selectArray = (row) => {
     const array =
@@ -59,12 +61,12 @@ export const RowsProvider = ({ children }) => {
     } else if (label === "big") {
       setArray(big);
     } else if (label === "all") {
-      setArray(labels);
+      setArray(all);
     }
   };
 
   const onSelectAll = (label, index, number_of_rows) => {
-    labels.forEach((value) => {
+    all.forEach((value) => {
       if (index === value) {
         if ((firstArray.indexOf(label) === -1 && index, number_of_rows >= 1)) {
           setFirstArray((prev) => [...prev, prev === label ? null : label]);
