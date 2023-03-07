@@ -84,6 +84,12 @@ export const gamesDescription = {
         "How to play: Pick 2 numbers to form 2 bets, any number appears 2 times on the 1st , 2nd and 3rd of the winning number, and the other number appears 1 time (in any order) to win.Win Sample：Bet plan: 1,2;Winning No.: 1,2,2,*,* as win.",
       columns: 10,
     },
+    First3Group6: {
+      name: "First 3 Group 6",
+      rowName: [""],
+      rules:"How to play: Pick 2 numbers to form 2 bets, any number appears 2 times on the 1st , 2nd and 3rd of the winning number, and the other number appears 1 time (in any order) to win.Win Sample：Bet plan: 1,2;Winning No.: 1,2,2,*,* as win.",
+      columns: 10,
+    },
   },
 };
 
@@ -127,6 +133,10 @@ export const first3GamesData = [
   {
     id:5,
     label : 'First 3 Group 3'
+  },
+  {
+    id:6,
+    label : 'First 3 Group 6'
   }
 ];
 //exporting buttons label globally
