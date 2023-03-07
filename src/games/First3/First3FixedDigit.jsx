@@ -6,7 +6,7 @@ import useRow from "../../hooks/useRows";
 import { gamesDescription } from "../../utils/Data";
 import { getNumCombinations } from "../../utils/Formula";
 
-function First3Group3() {
+function First3FixedDigit() {
   const { firstArray, onSelect } = useRow();
   const [bets, setBets] = useState("");
 
@@ -17,12 +17,12 @@ function First3Group3() {
   return (
     <div className="all520_container">
       <div className="game_rule">
-        {gamesDescription.first3.First3Group3.rules}
+        {gamesDescription.first3.First3FixedDigit.rules}
       </div>
-      <Rows gameDescription={gamesDescription.first3.First3Group3} />
+      <Rows gameDescription={gamesDescription.first3.First3FixedDigit} selectors={true}/>
       <Results bets={bets} />
     </div>
   );
 }
 
-export default First3Group3;
+export default First3FixedDigit;

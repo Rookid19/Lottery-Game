@@ -2,9 +2,14 @@ import React from "react";
 import useRow from "../hooks/useRows";
 import { buttons, button_selectors, rows } from "../utils/Data";
 
-function Rows({ gameDescription }) {
-  const { onSelect, selectArray, selectFilter, onSelectAll, onClear } =
-    useRow();
+function Rows({ gameDescription,selectors }) {
+  const {
+    onSelect,
+    selectArray,
+    selectFilter,
+    onSelectAll,
+    onClear,
+  } = useRow();
 
   const number_of_rows = gameDescription.rowName.length;
   const columns = gameDescription.columns;
@@ -33,17 +38,19 @@ function Rows({ gameDescription }) {
                 </button>
               ))}
             </div>
-            <div className="button_selectors_section">
-              {button_selectors.map(({ id, label }) => (
-                <button
-                  className="button_selector"
-                  key={id}
-                  onClick={() => selectFilter(label, row, columns)}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
+            {!selectors && (
+              <div className="button_selectors_section">
+                {button_selectors.map(({ id, label }) => (
+                  <button
+                    className="button_selector"
+                    key={id}
+                    onClick={() => selectFilter(label, row, columns)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
           {i + 1 === number_of_rows && number_of_rows > 1 && (
             <div className="all_clear">

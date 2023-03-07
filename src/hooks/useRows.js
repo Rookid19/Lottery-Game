@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { buttons, labels, long_labels } from "../utils/Data";
 
@@ -116,9 +117,13 @@ export const RowsProvider = ({ children }) => {
     if (array.includes(label)) {
       const index = array.indexOf(label);
       array.splice(index, 1);
-      setArray((prev) => [...prev]);
+      // setArray((prev) => [...prev]);
+      setArray((prev) => [prev]);
+
     } else {
-      setArray((prev) => [...prev, label]);
+      // setArray((prev) => [...prev, label]);
+      setArray((prev) => [prev, label]);
+
     }
   };
 
@@ -129,7 +134,8 @@ export const RowsProvider = ({ children }) => {
    * setFirstArray(), setSecondArray(), setThirdArray(), setFourthArray(), and setFifthArray() functions with the current values of each
    * array passed in as the new state. This causes the component to re-render with the updated state, removing the label from the corresponding array
    *
-   * @param {*} label
+   * @param {String} label
+   * @return {String}
    */
   const onClear = (label) => {
     const first_index = firstArray.indexOf(label);

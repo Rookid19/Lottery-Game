@@ -1,5 +1,6 @@
 import React from "react";
 import { first3GamesData } from "../../utils/Data";
+import First3FixedDigit from "./First3FixedDigit";
 import First3Group3 from "./First3Group3";
 import First3Group6 from "./First3Group6";
 import First3StraightCombo from "./First3StraightCombo";
@@ -40,7 +41,9 @@ function First3({ first3Tab, setFirst3Tab }) {
         <First3Group6 />
       ): first3Tab === 7 ?(
         <First3SumOfGroup />
-      ) : null}
+      ) :first3Tab === 8 ?(
+        <First3FixedDigit />
+      ): null}
     </div>
   );
 }
