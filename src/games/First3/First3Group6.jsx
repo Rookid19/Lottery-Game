@@ -3,14 +3,14 @@ import Results from "../../components/Results";
 import Rows from "../../components/Rows";
 import useRow from "../../hooks/useRows";
 import { gamesDescription } from "../../utils/Data";
-import { getNumCombinations, span } from "../../utils/Formula";
+import { getNumCombinations } from "../../utils/Formula";
 
 function First3Group6() {
   const { firstArray, onSelect } = useRow();
   const [bets, setBets] = useState("");
 
   useEffect(() => {
-    setBets(getNumCombinations(firstArray.length, 3) * 2);
+    setBets(getNumCombinations(firstArray.length, 3));
   }, [onSelect]);
 
   return (

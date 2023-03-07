@@ -3,7 +3,7 @@ import "./App.css";
 import All5 from "./games/All5/All5";
 import useRow from "./hooks/useRows";
 import Timer from "./components/Timer";
-import { buttons, gamesGroup } from "./utils/Data";
+import { gamesGroup } from "./utils/Data";
 import First3 from "./games/First3/First3";
 import { generateSequence } from "./utils/Formula";
 
@@ -30,8 +30,7 @@ function App() {
 
   const test = () => {
     const num = 16;
-    console.log(generateSequence(num))
-  
+    console.log(generateSequence(num));
   };
   return (
     <div className="App">

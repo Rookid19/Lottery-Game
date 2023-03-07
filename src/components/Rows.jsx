@@ -8,15 +8,16 @@ function Rows({ gameDescription }) {
 
   const number_of_rows = gameDescription.rowName.length;
   const columns = gameDescription.columns;
-
+  const start = gameDescription.name === "First 3 sum of Group" ? 1 : 0;
   return (
     <div className="rows_container">
+      {gameDescription.name}
       {rows.slice(0, number_of_rows).map((row, i) => (
         <div key={i}>
           <div className="row_horizontal">
             <span id="row_name">{gameDescription.rowName[i]}</span>
             <div className="button_container">
-              {buttons.slice(0, columns).map((label) => (
+              {buttons.slice(start, columns).map((label) => (
                 <button
                   className="button_number"
                   key={label}
@@ -37,27 +38,29 @@ function Rows({ gameDescription }) {
                 <button
                   className="button_selector"
                   key={id}
-                  onClick={() => selectFilter(label, row,columns)}
+                  onClick={() => selectFilter(label, row, columns)}
                 >
                   {label}
                 </button>
               ))}
             </div>
           </div>
-          {(i + 1 === number_of_rows && number_of_rows >1) && (
+          {i + 1 === number_of_rows && number_of_rows > 1 && (
             <div className="all_clear">
               <div>
                 {buttons.slice(0, columns).map((label, index) => (
                   <button
                     key={label}
                     className="button_all"
-                    onClick={() => onSelectAll(label, index, number_of_rows,columns)}
+                    onClick={() =>
+                      onSelectAll(label, index, number_of_rows, columns)
+                    }
                   >
                     All
                   </button>
                 ))}
               </div>
-              
+
               <div>
                 {buttons.slice(0, columns).map((label) => (
                   <button
