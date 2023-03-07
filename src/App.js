@@ -10,7 +10,7 @@ import { generateSequence } from "./utils/Formula";
 function App() {
   const [all5Tab, setAll5Tab] = useState(1);
   const [first3Tab, setFirst3Tab] = useState(1);
-  const [groupTab, setGroupTab] = useState(1);
+  const [groupTab, setGroupTab] = useState(2);
 
   const {
     setFirstArray,

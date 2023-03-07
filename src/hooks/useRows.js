@@ -10,13 +10,13 @@ export const RowsProvider = ({ children }) => {
   const [fourthArray, setFourthArray] = useState([]);
   const [fifthArray, setFifthArray] = useState([]);
 
-  const even = buttons.filter((item) => item % 2 === 0);
-  const odd = buttons.filter((item) => item % 2 !== 0);
-  const small =
-    buttons.length === 10 ? buttons.slice(0, 5) : buttons.slice(0, 14);
-  const big =
-    buttons.length === 10 ? buttons.slice(5, 10) : buttons.slice(14, 28);
-  const all = buttons.length === 10 ? labels : long_labels;
+  // const even = buttons.filter((item) => item % 2 === 0);
+  // const odd = buttons.filter((item) => item % 2 !== 0);
+  // const small =
+  //   buttons.length === 10 ? buttons.slice(0, 5) : buttons.slice(0, 14);
+  // const big =
+  //   buttons.length === 10 ? buttons.slice(5, 10) : buttons.slice(14, 28);
+  // const all = columns === 10 ? labels : long_labels;
 
   const selectArray = (row) => {
     const array =
@@ -48,7 +48,18 @@ export const RowsProvider = ({ children }) => {
     return setArray;
   };
 
-  const selectFilter = (label, row) => {
+  const selectFilter = (label, row, columns) => {
+    console.log("filter---> " + columns);
+    const even =
+      columns === 10 ? labels.filter((item) => item % 2 === 0) : long_labels;
+    const odd =
+      columns === 10 ? labels.filter((item) => item % 2 !== 0) : long_labels;
+    const small =
+      columns === 10 ? labels.slice(0, 5) : long_labels.slice(0, 14);
+    const big =
+      columns === 10 ? labels.slice(5, 10) : long_labels.slice(14, 28);
+    const all = columns === 10 ? labels : long_labels;
+
     const setArray = selectSetArray(row);
     if (label === "even") {
       setArray(even);
@@ -65,7 +76,9 @@ export const RowsProvider = ({ children }) => {
     }
   };
 
-  const onSelectAll = (label, index, number_of_rows) => {
+  const onSelectAll = (label, index, number_of_rows, columns) => {
+    const all = columns === 10 ? labels : long_labels;
+
     all.forEach((value) => {
       if (index === value) {
         if ((firstArray.indexOf(label) === -1 && index, number_of_rows >= 1)) {

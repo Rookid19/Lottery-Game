@@ -36,8 +36,8 @@ function Rows({ gameDescription }) {
               {button_selectors.map(({ id, label }) => (
                 <button
                   className="button_selector"
-                  key={label}
-                  onClick={() => selectFilter(label, row)}
+                  key={id}
+                  onClick={() => selectFilter(label, row,columns)}
                 >
                   {label}
                 </button>
@@ -51,7 +51,7 @@ function Rows({ gameDescription }) {
                   <button
                     key={label}
                     className="button_all"
-                    onClick={() => onSelectAll(label, index, number_of_rows)}
+                    onClick={() => onSelectAll(label, index, number_of_rows,columns)}
                   >
                     All
                   </button>

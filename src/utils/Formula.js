@@ -86,27 +86,13 @@ export function generateSequence(n) {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export function span(num) {
+  if (num === 0) {
+    return 10 - num;
+  } else {
+    return 6 * num * (10 - num);
+  }
+}
 
 // export function generateSequence(n) {
 //   let term;
@@ -129,4 +115,3 @@ export function generateSequence(n) {
 //   }
 //   return term;
 // }
-
