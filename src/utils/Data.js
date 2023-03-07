@@ -70,12 +70,20 @@ export const gamesDescription = {
         "How to play: Select 1 No. from 1st, 2nd, 3rd form all 1~3 combo. Total 3bets. Selected 3rd and winning No. same, as win 3rd Fixed Place; Selected 2nd, 3rd winning No. same, as win 3rd Fixed Place, 2nd/3rd Straight & so on. Maximum 3 prizes at one time. Win Sample：Bet plan: 1, 2, 3; Winning No.: 1, 2, 3, *, *, as win -, -, 3, *, */-, 2, 3, *, */1, 2, 3, *, *; Each 1 bet. ",
       columns: 28,
     },
-    SpanOfFirst3:{
+    SpanOfFirst3: {
       name: "Span of first 3",
       rowName: [""],
-      rules:"How to play: Select 1 value and max & min difference of 1st, 2nd, 3rd winning No. same, as win. Win Sample：Bet plan: 3;Winning No.: 1,2,4,*,* as win.",
+      rules:
+        "How to play: Select 1 value and max & min difference of 1st, 2nd, 3rd winning No. same, as win. Win Sample：Bet plan: 3;Winning No.: 1,2,4,*,* as win.",
       columns: 10,
-    }
+    },
+    First3Group3: {
+      name: "First 3 Group 3",
+      rowName: [""],
+      rules:
+        "How to play: Pick 2 numbers to form 2 bets, any number appears 2 times on the 1st , 2nd and 3rd of the winning number, and the other number appears 1 time (in any order) to win.Win Sample：Bet plan: 1,2;Winning No.: 1,2,2,*,* as win.",
+      columns: 10,
+    },
   },
 };
 
@@ -99,6 +107,7 @@ export const all5GamesData = [
     id: 5,
     label: "All 5 Group 20",
   },
+
 ];
 
 export const first3GamesData = [
@@ -115,6 +124,10 @@ export const first3GamesData = [
     id: 4,
     label: "Span of first 3",
   },
+  {
+    id:5,
+    label : 'First 3 Group 3'
+  }
 ];
 //exporting buttons label globally
 export const buttons = [

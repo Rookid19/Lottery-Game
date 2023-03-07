@@ -93,7 +93,7 @@ function Timer() {
 
   const LotteryRandomNumbers = useCallback(
     () => (
-      <LotteryNumbers numbers={randomNumber.toString().split("").map(Number)} />
+      <LotteryNumbers numbers={randomNumber?.toString().split("").map(Number)} />
     ),
     [randomNumber]
   );

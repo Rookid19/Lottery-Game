@@ -40,7 +40,7 @@ const LotteryNumbers = ({ numbers }) => {
       <div 
       className="lottery-numbers"
       >
-        {numbers.map((number, index) => (
+        {numbers?.map((number, index) => (
           <LotteryNumber key={index} delay={index * 0.1} number={number} />
         ))}
       </div>
