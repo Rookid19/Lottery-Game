@@ -1,5 +1,6 @@
 import React from "react";
 import { first3GamesData, gamesDescription } from "../../utils/Data";
+import First3Group3 from "./First3Group3";
 import First3StraightCombo from "./First3StraightCombo";
 import First3StraightJoint from "./First3StraightJoint";
 import SpanOfFirst3 from "./SpanOfFirst3";
@@ -31,6 +32,8 @@ function First3({ first3Tab, setFirst3Tab }) {
         <SumOfFirst3 />
       ) : first3Tab === 4 ?(
         <SpanOfFirst3 />
+      ): first3Tab === 5 ? (
+        <First3Group3 />
       ): null}
     </div>
   );
