@@ -163,14 +163,14 @@ export const gamesDescription = {
         "How to play: Select 1 value. Selected value equal to sum of 2nd, 3rd, 4th winning No. (Exclude TOAK); 2nd, 3rd, 4th have Pair, as win Mid3 Group3 Sum. Or else One No., as win Mid3 Group6 Sum. Win Sample：Bet plan: 6; Winning No. A: *, 3, 3, 0, *, as win Mid3 Sum of Group3. Winning No. B: 1, 2, 3, *, *, as win Mid3 Sum of Group6.",
       columns: 27,
     },
-    First3FixedDigit: {
+  FixedDigit: {
       name: "Mid 3 Fixed 3",
       rowName: [""],
       rules:
         "How to play: Select 1 No. Selected and any of 2nd, 3rd, 4th winning No. same (Exclude TOAK); 2nd, 3rd, 4th have Pair, as win Mid3 Fixed Digit Group3. Or else One No., as win Mid3 Fixed Digit Group6. Win Sample：Bet plan: 3; Winning No. A: *, 1, 3, 3, *, as win Mid3 Fixed Digit Group3. Winning No. B: *, 1, 2, 3, *, as win Mid3 Fixed Digit Group6.",
       columns: 10,
     },
-    First3sumOfTails: {
+SumOfTails: {
       name: "Mid 3 Sum of Tails",
       rowName: [""],
       rules:

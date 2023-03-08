@@ -4,7 +4,7 @@ import Rows from "../../components/Rows";
 import useRow from "../../hooks/useRows";
 import { gamesDescription } from "../../utils/Data";
 
-function Mid3Straightjoint() {
+function Mid3StraightJoint() {
   const { firstArray, secondArray, thirdArray, onSelect } = useRow();
 
   const [bets, setBets] = useState("");
@@ -30,4 +30,4 @@ function Mid3Straightjoint() {
   );
 }
 
-export default Mid3Straightjoint;
+export default Mid3StraightJoint;
