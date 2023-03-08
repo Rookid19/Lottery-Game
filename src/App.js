@@ -6,11 +6,13 @@ import Timer from "./components/Timer";
 import { gamesGroup } from "./utils/Data";
 import First3 from "./games/First3/First3";
 import { generateSequence } from "./utils/Formula";
+import Mid3 from "./games/Mid3/Mid3";
 
 function App() {
   const [all5Tab, setAll5Tab] = useState(1);
   const [first3Tab, setFirst3Tab] = useState(1);
-  const [groupTab, setGroupTab] = useState(2);
+  const [mid3Tab, setMid3Tab] = useState(1);
+  const [groupTab, setGroupTab] = useState(3);
 
   const {
     setFirstArray,
@@ -26,15 +28,11 @@ function App() {
     setThirdArray([]);
     setFourthArray([]);
     setFifthArray([]);
-  }, [all5Tab, first3Tab]);
+  }, [all5Tab, first3Tab,mid3Tab,groupTab]);
 
-  const test = () => {
-    const num = 16;
-    console.log(generateSequence(num));
-  };
   return (
     <div className="App">
-      <button onClick={test}>test</button>
+  
       <div className="group_tab">
         {gamesGroup.map(({ id, group }) => (
           <button
@@ -57,6 +55,8 @@ function App() {
         <All5 all5Tab={all5Tab} setAll5Tab={setAll5Tab} />
       ) : groupTab === 2 ? (
         <First3 first3Tab={first3Tab} setFirst3Tab={setFirst3Tab} />
+      ): groupTab === 3 ? (
+        <Mid3 mid3Tab={mid3Tab}  setMid3Tab={setMid3Tab}/>
       ) : null}
     </div>
   );

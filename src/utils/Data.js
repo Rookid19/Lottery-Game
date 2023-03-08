@@ -113,6 +113,15 @@ export const gamesDescription = {
       columns: 10,
     },
   },
+  mid3: {
+    StraightJoint: {
+      name: "First 3 Straight(Joint)",
+      rowName: ["2nd", "3rd", "4th"],
+      rules:
+        "How to play: Select 1 No. from 1st, 2nd, 3rd form 1bet. Selected and 1st, 2nd, 3rd, 5th winning No. same & in order, as win. Win Sample：Bet plan: 3,4,5;Winning No.: 3,4,5,*,* as win.",
+      columns: 10,
+    },
+  },
 };
 
 export const rows = [1, 2, 3, 4, 5];
@@ -172,6 +181,43 @@ export const first3GamesData = [
     label: "First 3 Sum of Tails",
   },
 ];
+
+export const mid3GamesData = [
+  { id: 1, label: "mid 3 straight (joint)" },
+  {
+    id: 2,
+    label: "Mid 3 Straight(Combo)",
+  },
+  {
+    id: 3,
+    label: "Sum of mid 3",
+  },
+  {
+    id: 4,
+    label: "Span of mid 3",
+  },
+  {
+    id: 5,
+    label: "Mid 3 Group 3",
+  },
+  {
+    id: 6,
+    label: "Mid 3 Group 6",
+  },
+  {
+    id: 7,
+    label: "Mid 3 sum of Group",
+  },
+  {
+    id: 8,
+    label: "Mid 3 Fixed Digit",
+  },
+  {
+    id: 9,
+    label: "Mid 3 Sum of Tails",
+  },
+];
+
 //exporting buttons label globally
 export const buttons = [
   0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
@@ -199,4 +245,5 @@ export const prices = [2, 1, 0.2, 0.1, 0.02, 0.01, 0.002, 0.001];
 export const gamesGroup = [
   { id: 1, group: "All 5" },
   { id: 2, group: "First 3" },
+  { id: 3, group: "Mid 3" },
 ];
