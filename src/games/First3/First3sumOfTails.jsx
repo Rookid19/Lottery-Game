@@ -1,3 +1,4 @@
+
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import Results from "../../components/Results";
@@ -5,7 +6,7 @@ import Rows from "../../components/Rows";
 import useRow from "../../hooks/useRows";
 import { gamesDescription } from "../../utils/Data";
 
-function First3FixedDigit() {
+function First3sumOfTails() {
   const { onSelect } = useRow();
   const [bets, setBets] = useState("");
 
@@ -16,10 +17,10 @@ function First3FixedDigit() {
   return (
     <div className="all520_container">
       <div className="game_rule">
-        {gamesDescription.first3.First3FixedDigit.rules}
+        {gamesDescription.first3.First3sumOfTails.rules}
       </div>
       <Rows
-        gameDescription={gamesDescription.first3.First3FixedDigit}
+        gameDescription={gamesDescription.first3.First3sumOfTails}
         selectors={true}
         selectionType="single"
       />
@@ -28,4 +29,4 @@ function First3FixedDigit() {
   );
 }
 
-export default First3FixedDigit;
+export default First3sumOfTails;

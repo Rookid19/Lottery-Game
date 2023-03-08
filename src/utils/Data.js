@@ -105,6 +105,13 @@ export const gamesDescription = {
         "How to play: Select 1 value. Selected value equal to sum of 1st, 2nd, 3rd winning No. (Exclude TOAK); 1st, 2nd, 3rd have Pair, as win First3 Group3 Sum. Or else One No., as win First3 Group3 Sum. Win Sample：Bet plan: 6; Winning No. A: 3, 3, 0, *, *, as win First3 Sum of Group3. Winning No. B: 1, 2, 3, *, *, as win First3 Sum of Group6.",
       columns: 10,
     },
+    First3sumOfTails: {
+      name: "First 3 Sum of Tails",
+      rowName: [""],
+      rules:
+        "How to play: Select 1 value and sum of 1st, 2nd, 3rd tails same, as win. Win Sample：Bet plan: 3;Winning No.: 0,2,1,*,* as win.",
+      columns: 10,
+    },
   },
 };
 
@@ -159,6 +166,10 @@ export const first3GamesData = [
   {
     id: 8,
     label: "First 3 Fixed Digit",
+  },
+  {
+    id: 9,
+    label: "First 3 Sum of Tails",
   },
 ];
 //exporting buttons label globally

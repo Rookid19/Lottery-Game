@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
-import { buttons, labels, long_labels } from "../utils/Data";
+import {  labels, long_labels } from "../utils/Data";
 
 export const RowsContext = createContext({});
 
@@ -110,7 +110,7 @@ export const RowsProvider = ({ children }) => {
    *removes the label from the array using the splice method.
    * @param {*} label
    */
-  const onSelect = (label, row) => {
+  const onSelect = (label, row, selectionType) => {
     const array = selectArray(row);
     const setArray = selectSetArray(row);
 
@@ -118,12 +118,14 @@ export const RowsProvider = ({ children }) => {
       const index = array.indexOf(label);
       array.splice(index, 1);
       // setArray((prev) => [...prev]);
-      setArray((prev) => [prev]);
-
+      selectionType === "single"
+        ? setArray((prev) => [prev])
+        : setArray((prev) => [...prev]);
     } else {
       // setArray((prev) => [...prev, label]);
-      setArray((prev) => [prev, label]);
-
+      selectionType === "single"
+        ? setArray((prev) => [prev, label])
+        : setArray((prev) => [...prev, label]);
     }
   };
 

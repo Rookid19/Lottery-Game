@@ -2,7 +2,7 @@ import React from "react";
 import useRow from "../hooks/useRows";
 import { buttons, button_selectors, rows } from "../utils/Data";
 
-function Rows({ gameDescription,selectors }) {
+function Rows({ gameDescription,selectors,selectionType }) {
   const {
     onSelect,
     selectArray,
@@ -26,7 +26,7 @@ function Rows({ gameDescription,selectors }) {
                 <button
                   className="button_number"
                   key={label}
-                  onClick={() => onSelect(label, row)}
+                  onClick={() => onSelect(label, row,selectionType)}
                   style={{
                     backgroundColor: selectArray(row)?.includes(label)
                       ? "#2e99e9"

@@ -6,6 +6,7 @@ import First3Group6 from "./First3Group6";
 import First3StraightCombo from "./First3StraightCombo";
 import First3StraightJoint from "./First3StraightJoint";
 import First3SumOfGroup from "./First3SumOfGroup";
+import First3sumOfTails from "./First3sumOfTails";
 import SpanOfFirst3 from "./SpanOfFirst3";
 import SumOfFirst3 from "./SumOfFirst3";
 
@@ -33,17 +34,19 @@ function First3({ first3Tab, setFirst3Tab }) {
         <First3StraightCombo />
       ) : first3Tab === 3 ? (
         <SumOfFirst3 />
-      ) : first3Tab === 4 ?(
+      ) : first3Tab === 4 ? (
         <SpanOfFirst3 />
-      ): first3Tab === 5 ? (
+      ) : first3Tab === 5 ? (
         <First3Group3 />
-      ): first3Tab === 6 ? (
+      ) : first3Tab === 6 ? (
         <First3Group6 />
-      ): first3Tab === 7 ?(
+      ) : first3Tab === 7 ? (
         <First3SumOfGroup />
-      ) :first3Tab === 8 ?(
+      ) : first3Tab === 8 ? (
         <First3FixedDigit />
-      ): null}
+      ) : first3Tab === 9 ? (
+        <First3sumOfTails />
+      ) : null}
     </div>
   );
 }
