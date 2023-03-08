@@ -118,7 +118,63 @@ export const gamesDescription = {
       name: "First 3 Straight(Joint)",
       rowName: ["2nd", "3rd", "4th"],
       rules:
-        "How to play: Select 1 No. from 1st, 2nd, 3rd form 1bet. Selected and 1st, 2nd, 3rd, 5th winning No. same & in order, as win. Win Sample：Bet plan: 3,4,5;Winning No.: 3,4,5,*,* as win.",
+        "How to play: Select 1 No. from 1st, 2nd, 3rd form 1bet. Selected and 1st, 2nd, 3rd, 5th winning No. same & in order, as win. Win Sample：Bet plan: 3,4,5;Winning No.: 3,4,5,*,* as win",
+      columns: 10,
+    },
+    StraightCombo: {
+      name: "Mid 3 Straight(Combo)",
+      rowName: ["2nd", "3rd", "4th"],
+      rules:
+        "How to play: Select 1 No. from 1st, 2nd, 3rd form all 1~3 combo. Total 3bets. Selected 3rd and winning No. same, as win 3rd Fixed Place; Selected 2nd, 3rd winning No. same, as win 3rd Fixed Place, 2nd/3rd Straight & so on. Maximum 3 prizes at one time. Win Sample：Bet plan: 1, 2, 3; Winning No.: 1, 2, 3, *, *, as win -, -, 3, *, */-, 2, 3, *, */1, 2, 3, *, *; Each 1 bet.",
+      columns: 10,
+    },
+    SumOfMid3: {
+      name: "Sum of Mid 3",
+      rowName: [""],
+      rules:
+        "How to play: Select 1 No. from 1st, 2nd, 3rd form all 1~3 combo. Total 3bets. Selected 3rd and winning No. same, as win 3rd Fixed Place; Selected 2nd, 3rd winning No. same, as win 3rd Fixed Place, 2nd/3rd Straight & so on. Maximum 3 prizes at one time. Win Sample：Bet plan: 1, 2, 3; Winning No.: 1, 2, 3, *, *, as win -, -, 3, *, */-, 2, 3, *, */1, 2, 3, *, *; Each 1 bet. ",
+      columns: 28,
+    },
+    SpanOfMid3: {
+      name: "Span of Mid 3",
+      rowName: [""],
+      rules:
+        "How to play: Select 1 value and max & min difference of 1st, 2nd, 3rd winning No. same, as win. Win Sample：Bet plan: 3;Winning No.: 1,2,4,*,* as win.",
+      columns: 10,
+    },
+    Mid3Group3: {
+      name: "Mid 3 Group 3",
+      rowName: [""],
+      rules:
+        "How to play: Pick 2 numbers to form 2 bets, any number appears twice on the 2nd, 3rd , and 4th of the winning numbers, and 1 other number appears once (in any order) to win. Win Sample：Bet plan: 1,2;Winning No.: *,1,2,2,* as win.",
+      columns: 10,
+    },
+    Mid3Group6: {
+      name: "Mid 3 Group 6",
+      rowName: [""],
+      rules:
+        " How to play: Pick 3 numbers to form 1 bet. The picked number match the 2nd, 3rd , and 4th of the winning numbers, and 1 other number appears once (in any order) to win. Win Sample：Bet plan: 1,2,3;Winning No.: *,1,3,2,* as win.",
+      columns: 10,
+    },
+    Mid3SumOfGroup: {
+      name: "Mid 3 sum of Group",
+      rowName: [""],
+      rules:
+        "How to play: Select 1 value. Selected value equal to sum of 2nd, 3rd, 4th winning No. (Exclude TOAK); 2nd, 3rd, 4th have Pair, as win Mid3 Group3 Sum. Or else One No., as win Mid3 Group6 Sum. Win Sample：Bet plan: 6; Winning No. A: *, 3, 3, 0, *, as win Mid3 Sum of Group3. Winning No. B: 1, 2, 3, *, *, as win Mid3 Sum of Group6.",
+      columns: 27,
+    },
+    First3FixedDigit: {
+      name: "Mid 3 Fixed 3",
+      rowName: [""],
+      rules:
+        "How to play: Select 1 No. Selected and any of 2nd, 3rd, 4th winning No. same (Exclude TOAK); 2nd, 3rd, 4th have Pair, as win Mid3 Fixed Digit Group3. Or else One No., as win Mid3 Fixed Digit Group6. Win Sample：Bet plan: 3; Winning No. A: *, 1, 3, 3, *, as win Mid3 Fixed Digit Group3. Winning No. B: *, 1, 2, 3, *, as win Mid3 Fixed Digit Group6.",
+      columns: 10,
+    },
+    First3sumOfTails: {
+      name: "Mid 3 Sum of Tails",
+      rowName: [""],
+      rules:
+        "How to play: Select 1 value & sum of 2nd, 3rd, 4th tails same, as win. Win Sample：Bet plan: 3;Winning No.: *,0,2,1,* as win.",
       columns: 10,
     },
   },
