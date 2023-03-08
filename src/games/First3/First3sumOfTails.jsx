@@ -7,11 +7,11 @@ import useRow from "../../hooks/useRows";
 import { gamesDescription } from "../../utils/Data";
 
 function First3sumOfTails() {
-  const { onSelect } = useRow();
+  const { onSelect ,firstArray} = useRow();
   const [bets, setBets] = useState("");
 
   useEffect(() => {
-    setBets(54);
+    setBets(firstArray.length);
   }, [onSelect]);
 
   return (
@@ -21,8 +21,7 @@ function First3sumOfTails() {
       </div>
       <Rows
         gameDescription={gamesDescription.first3.First3sumOfTails}
-        selectors={true}
-        selectionType="single"
+
       />
       <Results bets={bets} />
     </div>

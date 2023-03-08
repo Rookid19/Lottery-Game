@@ -16,7 +16,6 @@ function Rows({ gameDescription,selectors,selectionType }) {
   const start = gameDescription.name === "First 3 sum of Group" ? 1 : 0;
   return (
     <div className="rows_container">
-      {gameDescription.name}
       {rows.slice(0, number_of_rows).map((row, i) => (
         <div key={i}>
           <div className="row_horizontal">
