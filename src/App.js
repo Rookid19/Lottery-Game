@@ -7,11 +7,13 @@ import { gamesGroup } from "./utils/Data";
 import First3 from "./games/First3/First3";
 import { generateSequence } from "./utils/Formula";
 import Mid3 from "./games/Mid3/Mid3";
+import Pick2 from "./games/Pick2/Pick2";
 
 function App() {
   const [all5Tab, setAll5Tab] = useState(1);
   const [first3Tab, setFirst3Tab] = useState(1);
   const [mid3Tab, setMid3Tab] = useState(1);
+  const [pick2, setPick2] = useState(1);
   const [groupTab, setGroupTab] = useState(3);
 
   const {
@@ -28,11 +30,10 @@ function App() {
     setThirdArray([]);
     setFourthArray([]);
     setFifthArray([]);
-  }, [all5Tab, first3Tab,mid3Tab,groupTab]);
+  }, [all5Tab, first3Tab, mid3Tab, pick2, groupTab]);
 
   return (
     <div className="App">
-  
       <div className="group_tab">
         {gamesGroup.map(({ id, group }) => (
           <button
@@ -55,8 +56,10 @@ function App() {
         <All5 all5Tab={all5Tab} setAll5Tab={setAll5Tab} />
       ) : groupTab === 2 ? (
         <First3 first3Tab={first3Tab} setFirst3Tab={setFirst3Tab} />
-      ): groupTab === 3 ? (
-        <Mid3 mid3Tab={mid3Tab}  setMid3Tab={setMid3Tab}/>
+      ) : groupTab === 3 ? (
+        <Mid3 mid3Tab={mid3Tab} setMid3Tab={setMid3Tab} />
+      ) : groupTab === 4 ? (
+        <Pick2 />
       ) : null}
     </div>
   );
