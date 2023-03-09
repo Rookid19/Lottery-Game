@@ -108,3 +108,16 @@ export function generateFirst3SumOfGroup(number) {
   return ans.length;
 }
 
+export function pick2(array) {
+  let count = 0;
+
+  array.forEach((arr, index) => {
+    arr.forEach(() => {
+      if (index < array.length - 1) {
+        count += array.slice(index + 1).flat().length;
+      }
+    });
+  });
+  
+  return count;
+}

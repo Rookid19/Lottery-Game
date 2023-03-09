@@ -3,23 +3,30 @@ import Results from "../../components/Results";
 import Rows from "../../components/Rows";
 import useRow from "../../hooks/useRows";
 import { gamesDescription } from "../../utils/Data";
+import { pick2 } from "../../utils/Formula";
 
 function Pick2Joint() {
-  const { firstArray, secondArray, thirdArray, onSelect } = useRow();
+  const {
+    firstArray,
+    secondArray,
+    thirdArray,
+    fourthArray,
+    fifthArray,
+    onSelect,
+  } = useRow();
 
   const [bets, setBets] = useState("");
-  const results = firstArray.length * secondArray.length * thirdArray.length;
+
 
   useEffect(() => {
-    setBets(results);
-    console.log(results);
+    setBets(
+      pick2([firstArray, secondArray, thirdArray, fourthArray, fifthArray])
+    );
   }, [onSelect]);
 
   return (
     <div className="all520_container">
-      <div className="game_rule">
-        {gamesDescription.pick2.Joint.rules}
-      </div>
+      <div className="game_rule">{gamesDescription.pick2.Joint.rules}</div>
       <Rows gameDescription={gamesDescription.pick2.Joint} />
       <Results bets={bets} />
     </div>
