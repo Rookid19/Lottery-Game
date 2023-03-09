@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import Results from "../../components/Results";
 import Rows from "../../components/Rows";
