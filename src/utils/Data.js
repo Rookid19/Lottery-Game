@@ -163,18 +163,55 @@ export const gamesDescription = {
         "How to play: Select 1 value. Selected value equal to sum of 2nd, 3rd, 4th winning No. (Exclude TOAK); 2nd, 3rd, 4th have Pair, as win Mid3 Group3 Sum. Or else One No., as win Mid3 Group6 Sum. Win Sample：Bet plan: 6; Winning No. A: *, 3, 3, 0, *, as win Mid3 Sum of Group3. Winning No. B: 1, 2, 3, *, *, as win Mid3 Sum of Group6.",
       columns: 27,
     },
-  FixedDigit: {
+    FixedDigit: {
       name: "Mid 3 Fixed 3",
       rowName: [""],
       rules:
         "How to play: Select 1 No. Selected and any of 2nd, 3rd, 4th winning No. same (Exclude TOAK); 2nd, 3rd, 4th have Pair, as win Mid3 Fixed Digit Group3. Or else One No., as win Mid3 Fixed Digit Group6. Win Sample：Bet plan: 3; Winning No. A: *, 1, 3, 3, *, as win Mid3 Fixed Digit Group3. Winning No. B: *, 1, 2, 3, *, as win Mid3 Fixed Digit Group6.",
       columns: 10,
     },
-SumOfTails: {
+    SumOfTails: {
       name: "Mid 3 Sum of Tails",
       rowName: [""],
       rules:
         "How to play: Select 1 value & sum of 2nd, 3rd, 4th tails same, as win. Win Sample：Bet plan: 3;Winning No.: *,0,2,1,* as win.",
+      columns: 10,
+    },
+  },
+  pick2: {
+    Joint: {
+      name: "Pick 2(Joint)",
+      rowName: ["1st", "2nd", "3rd", "4th", "5th"],
+      rules:
+        "How to play: Select 1 No. from 1st, 2nd, 3rd form 1bet. Selected and 1st, 2nd, 3rd, 5th winning No. same & in order, as win. Win Sample：Bet plan: 3,4,5;Winning No.: 3,4,5,*,* as win.",
+      columns: 10,
+    },
+    SumOf2: {
+      name: "Sum of 2",
+      rowName: [""],
+      rules:
+        " How to play: Select 2 places from 1st, 2nd, 3rd, 4th, 5th & select 1 No. form 1bet. Selected and winning No. same & in order, as win. Win Sample：Bet plan: 1,2,-,-,-;Winning No.: 1,2,*,*,* as win.",
+      columns: 19,
+    },
+    GroupJoint: {
+      name: "Group(Joint)",
+      rowName: [""],
+      rules:
+        "How to play: Select 2 places from 1st, 2nd, 3rd, 4th, 5th & select 1 No. form 1bet. Selected and winning No. same & in order, as win. Win Sample：Bet plan: 1,2,-,-,-;Winning No.: 1,2,*,*,* as win.",
+      columns: 10,
+    },
+    TwoGroupSum: {
+      name: "2 Group Sum",
+      rowName: [""],
+      rules:
+        "How to play: Select 2 places from 1st, 2nd, 3rd, 4th, 5th & select 1 No. form 1bet. Selected and winning No. same & in order, as win. Win Sample：Bet plan: 1,2,-,-,-;Winning No.: 1,2,*,*,* as win.",
+      columns: 10,
+    },
+    FixedDigit: {
+      name: "Pick 2 Fixed Digit",
+      rowName: [""],
+      rules:
+        "How to play: Select 2 places from 1st, 2nd, 3rd, 4th, 5th & select 1 No. form 1bet. Selected and winning No. same & in order, as win. Win Sample：Bet plan: 1,2,-,-,-;Winning No.: 1,2,*,*,* as win.",
       columns: 10,
     },
   },
@@ -302,4 +339,5 @@ export const gamesGroup = [
   { id: 1, group: "All 5" },
   { id: 2, group: "First 3" },
   { id: 3, group: "Mid 3" },
+  { id: 4, group: "Pick 2" },
 ];
