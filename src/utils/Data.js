@@ -313,9 +313,9 @@ export const mid3GamesData = [
 
 export const pick2Data = [
   { id: 1, label: "Pick 2(Joint)" },
-  { id: 2, label: "Pick 2(Joint)" },
-  { id: 3, label: "Pick 2(Joint)" },
-  { id: 4, label: "2 Group" },
+  { id: 2, label: "Sum of 2" },
+  { id: 3, label: "Pick 2 Group(Joint)" },
+  { id: 4, label: "2 Group Sum" },
   { id: 5, label: "Pick 2 Fixed Digit" },
 ];
 

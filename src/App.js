@@ -13,7 +13,7 @@ function App() {
   const [all5Tab, setAll5Tab] = useState(1);
   const [first3Tab, setFirst3Tab] = useState(1);
   const [mid3Tab, setMid3Tab] = useState(1);
-  const [pick2, setPick2] = useState(1);
+  const [pick2Tab, setPick2Tab] = useState(1);
   const [groupTab, setGroupTab] = useState(3);
 
   const {
@@ -30,7 +30,7 @@ function App() {
     setThirdArray([]);
     setFourthArray([]);
     setFifthArray([]);
-  }, [all5Tab, first3Tab, mid3Tab, pick2, groupTab]);
+  }, [all5Tab, first3Tab, mid3Tab, pick2Tab, groupTab]);
 
   return (
     <div className="App">
@@ -59,7 +59,7 @@ function App() {
       ) : groupTab === 3 ? (
         <Mid3 mid3Tab={mid3Tab} setMid3Tab={setMid3Tab} />
       ) : groupTab === 4 ? (
-        <Pick2 />
+        <Pick2 pick2Tab={pick2Tab} setPick2Tab={setPick2Tab} />
       ) : null}
     </div>
   );
