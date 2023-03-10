@@ -8,6 +8,7 @@ import First3 from "./games/First3/First3";
 import { generateSequence } from "./utils/Formula";
 import Mid3 from "./games/Mid3/Mid3";
 import Pick2 from "./games/Pick2/Pick2";
+import InstantFast3 from "./components/InstantFast3";
 
 function App() {
   const [all5Tab, setAll5Tab] = useState(1);
@@ -34,6 +35,7 @@ function App() {
 
   return (
     <div className="App">
+      <InstantFast3  number={1}/>
       <div className="group_tab">
         {gamesGroup.map(({ id, group }) => (
           <button
