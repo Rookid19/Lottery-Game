@@ -113,7 +113,7 @@ function Timer() {
             width: `${width}%`,
             backgroundColor: "red",
             borderRadius: 5,
-            // transition :0.2
+            transition: 'width 1s ease',
           }}
         ></div>
       </div>

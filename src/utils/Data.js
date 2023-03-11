@@ -319,6 +319,14 @@ export const pick2Data = [
   { id: 5, label: "Pick 2 Fixed Digit" },
 ];
 
+export const instantFast3Data = [
+  { id: 1, label: "Three of a Kind" },
+  { id: 2, label: "Three No." },
+  { id: 3, label: "One Pair" },
+  { id: 4, label: "Two No." },
+  { id: 5, label: "Guess A No." },
+];
+
 //exporting buttons label globally
 export const buttons = [
   0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
@@ -348,4 +356,38 @@ export const gamesGroup = [
   { id: 2, group: "First 3" },
   { id: 3, group: "Mid 3" },
   { id: 4, group: "Pick 2" },
+  {id:5,group:"Instant fast 3"},
+];
+
+export const dots = [
+  [
+    [0, 0, 0],
+    [0, 1, 0],
+    [0, 0, 0],
+  ],
+  [
+    [1, 0, 0],
+    [0, 0, 0],
+    [0, 0, 1],
+  ],
+  [
+    [1, 0, 0],
+    [0, 1, 0],
+    [0, 0, 1],
+  ],
+  [
+    [1, 0, 1],
+    [0, 0, 0],
+    [1, 0, 1],
+  ],
+  [
+    [1, 0, 1],
+    [0, 1, 0],
+    [1, 0, 1],
+  ],
+  [
+    [1, 0, 1],
+    [1, 0, 1],
+    [1, 0, 1],
+  ],
 ];
