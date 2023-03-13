@@ -11,6 +11,10 @@ function ThreeOfAKind() {
 
   return (
     <div>
+         <div className="game_rule" style={{marginTop:20}}>
+         How to play:Select 1 combo form 1bet. Selected and winning No. same, as win.
+Win Sample：Bet plan A:Standard 111; Winning No.:1,1,1,as win. Bet plan B:Three of a kind-all Winning No.:3,3,3,as win.
+      </div>
       <div className="standard">
         <h3 style={{ marginTop: 50, marginRight: 10 }}>Standard</h3>
         {[0, 1, 2, 3, 4, 5].map((num) => (
@@ -39,7 +43,7 @@ function ThreeOfAKind() {
                                   .toString()
                                   .split(",")
                                   .includes("1")
-                                  ? "#c61c30"
+                                  ? "#000"
                                   : null,
                               }}
                               key={index}
@@ -91,7 +95,7 @@ function ThreeOfAKind() {
                                     .toString()
                                     .split(",")
                                     .includes("1")
-                                    ? "#c61c30"
+                                    ? "#000"
                                     : null,
                                 }}
                                 key={index}

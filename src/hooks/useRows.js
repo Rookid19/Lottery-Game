@@ -52,15 +52,16 @@ export const RowsProvider = ({ children }) => {
   const selectFilter = (label, row, columns) => {
     console.log("filter---> " + columns);
     const even =
-      columns === 10 ? labels.filter((item) => item % 2 === 0) : long_labels;
+      columns === 10 ? labels.filter((item) => item % 2 === 0) : columns === 'sum' ? long_labels.filter((item) => item % 2 === 0) : long_labels;
     const odd =
-      columns === 10 ? labels.filter((item) => item % 2 !== 0) : long_labels;
+      columns === 10 ? labels.filter((item) => item % 2 !== 0) :  columns === 'sum' ? long_labels.filter((item) => item % 2 !== 0): long_labels;
     const small =
-      columns === 10 ? labels.slice(0, 5) : long_labels.slice(0, 14);
+      columns === 10 ? labels.slice(0, 5) :  columns === 'sum' ? long_labels.slice(3, 11) : long_labels.slice(0, 14);
     const big =
-      columns === 10 ? labels.slice(5, 10) : long_labels.slice(14, 28);
-    const all = columns === 10 ? labels : long_labels;
+      columns === 10 ? labels.slice(5, 10):  columns === 'sum' ? long_labels.slice(11, 19) : long_labels.slice(14, 28);
+    const all = columns === 10 ? labels :columns === 'sum' ? long_labels.slice(3, 19)  : long_labels;
 
+    console.log("all " + all)
     const setArray = selectSetArray(row);
     if (label === "even") {
       setArray(even);

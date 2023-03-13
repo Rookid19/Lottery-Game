@@ -38,6 +38,8 @@ import GuessANumber from "./GuessANumber";
 import OnePairGroup from "./OnePairGroup";
 import ThreeNoGroup from "./ThreeNoGroup";
 import ThreeOfAKind from "./ThreeOfAKind";
+import TwoNo from "./BSOEOfSum";
+import Sum from "./Sum";
 
 function InstantFast3({ instantFast3, setInstantFast3 }) {
   return (
@@ -57,15 +59,19 @@ function InstantFast3({ instantFast3, setInstantFast3 }) {
           </button>
         ))}
       </div>
-      {instantFast3 === 1 ? (
+      {instantFast3 === 2 ? (
         <ThreeOfAKind />
-      ) : instantFast3 === 2 ? (
+      ) : instantFast3 === 3 ? (
         <ThreeNoGroup />
-      ) :instantFast3 === 5 ?(
+      ) : instantFast3 === 6 ? (
         <GuessANumber />
-      ): instantFast3 === 3 ?(
+      ) : instantFast3 === 4 ? (
         <OnePairGroup />
-      ):null}
+      ) : instantFast3 === 5 ? (
+        <TwoNo />
+      ):instantFast3 === 1 ?(
+        <Sum />
+      ) : null}
     </div>
   );
 }

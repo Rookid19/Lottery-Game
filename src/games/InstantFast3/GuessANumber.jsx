@@ -8,6 +8,10 @@ function GuessANumber() {
 
   return (
     <div>
+      <div className="game_rule" style={{ marginTop: 20 }}>
+        How to play:Select 1 No. form 1bet. Winning No. include selected, as
+        win. Win Sample：Bet plan:1; Winning No.:1,1,2,as win.
+      </div>
       <div className="standard">
         <h3 style={{ marginTop: 50, marginRight: 10 }}>Standard</h3>
         {[0, 1, 2, 3, 4, 5].map((num) => (
@@ -23,9 +27,7 @@ function GuessANumber() {
               {dots
                 .filter((val, i) => i === num)
                 .map((arr, i) => (
-                  <div className="dice" key={i} 
-                  style={{marginLeft:30}}
-                  >
+                  <div className="dice" key={i} style={{ marginLeft: 30 }}>
                     <div className="dice_circle">
                       {arr
                         .toString()
@@ -37,7 +39,7 @@ function GuessANumber() {
                                 .toString()
                                 .split(",")
                                 .includes("1")
-                                ? "#c61c30"
+                                ? "#000"
                                 : null,
                             }}
                             key={index}

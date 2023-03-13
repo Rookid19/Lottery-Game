@@ -320,11 +320,12 @@ export const pick2Data = [
 ];
 
 export const instantFast3Data = [
-  { id: 1, label: "Three of a Kind" },
-  { id: 2, label: "Three No. Group" },
-  { id: 3, label: "One Pair" },
-  { id: 4, label: "Two No." },
-  { id: 5, label: "Guess A No." },
+  {id:1,label:'Sum'},
+  { id: 2, label: "Three of a Kind" },
+  { id: 3, label: "Three No. Group" },
+  { id: 4, label: "One Pair Group" },
+  { id: 5, label: "B/S/O/E of Sum" },
+  { id: 6, label: "Guess A No." },
 ];
 
 //exporting buttons label globally
