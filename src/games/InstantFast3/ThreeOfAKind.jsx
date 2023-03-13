@@ -7,7 +7,6 @@ function ThreeOfAKind() {
   const { onSelect, selectArray, secondArray, firstArray, setSecondArray } =
     useRow();
 
-  const abc = (num) => num;
   const [c, d] = useState();
 
   return (
@@ -61,10 +60,7 @@ function ThreeOfAKind() {
         <div
           className="all_container"
           style={{
-            backgroundColor:
-              selectArray(1)?.includes(c) || selectArray(2)?.includes(c)
-                ? "#7171dc"
-                : null,
+            backgroundColor: selectArray(2)?.includes(c) ? "#7171dc" : null,
           }}
         >
           {[0, 1, 2, 3, 4, 5].map((num) => (
@@ -72,12 +68,11 @@ function ThreeOfAKind() {
               className="card1"
               key={num}
               onClick={() => {
+                d(num);
                 secondArray.length === 0
                   ? setSecondArray([0, 1, 2, 3, 4, 5])
                   : setSecondArray([]);
-                d(num);
               }}
-        
             >
               {[0, 1, 2].map((a, i) => (
                 <div key={a}>
@@ -111,9 +106,8 @@ function ThreeOfAKind() {
             </div>
           ))}
         </div>
-        {/* </div> */}
       </div>
-      <Results bets={firstArray.length + setSecondArray.length} />
+      <Results bets={firstArray.length + (secondArray.length > 0 ? 1 : 0)} />
     </div>
   );
 }

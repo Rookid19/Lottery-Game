@@ -221,6 +221,11 @@
 .all {
   display: flex;
 }
+.card:hover {
+  background-color: #cfcdff;
+  border-radius: 5px;
+  border: 1px solid #7171dc;
+}
 .all_container:hover {
   background-color: #cfcdff;
   border-radius: 5px;
