@@ -221,7 +221,7 @@
 .all {
   display: flex;
 }
-.card:hover {
+.card:hover,.small_card:hover {
   background-color: #cfcdff;
   border-radius: 5px;
   border: 1px solid #7171dc;

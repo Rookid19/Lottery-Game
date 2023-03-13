@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Results from "../../components/Results";
 import useRow from "../../hooks/useRows";
 import { dots } from "../../utils/Data";
 
 function OnePairGroup() {
-  const { onSelect, selectArray, secondArray, firstArray, setSecondArray } =
-    useRow();
-
-  const [c, d] = useState();
+  const { onSelect, selectArray, secondArray, firstArray } = useRow();
 
   return (
     <div>
