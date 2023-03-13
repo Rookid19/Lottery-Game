@@ -34,6 +34,7 @@
 
 import React from "react";
 import { instantFast3Data } from "../../utils/Data";
+import GuessANumber from "./GuessANumber";
 import ThreeNo from "./ThreeNo";
 import ThreeOfAKind from "./ThreeOfAKind";
 
@@ -59,7 +60,9 @@ function InstantFast3({ instantFast3, setInstantFast3 }) {
         <ThreeOfAKind />
       ) : instantFast3 === 2 ? (
         <ThreeNo />
-      ) : null}
+      ) :instantFast3 === 5 ?(
+        <GuessANumber />
+      ): null}
     </div>
   );
 }
