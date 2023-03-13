@@ -211,27 +211,25 @@
   margin-right: 30px;
 }
 .card1 {
-  width: 130px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-right: 30px;
+  width: 130px;
+  margin-right: 25px;
 }
 .all {
   display: flex;
-  /* margin-top: 20px; */
-  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
 }
-.card:hover {
+.all_container:hover {
   background-color: #cfcdff;
   border-radius: 5px;
   border: 1px solid #7171dc;
 }
 
-.all_container{
+.all_container {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-display: flex;
-margin-top: 20px;
-margin-left: 50px;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 50px;
 }
