@@ -68,12 +68,12 @@ export function generateSequence(n) {
   if (n < 10) {
     return ((n + 1) * (n + 2)) / 2;
   } else if (n > 17) {
-    // n = 18 - n;
+    n = 27 - n;
     // const index = buttons
     //   .slice(17, 28) // 17 - 27
     //   .reverse()
     //   .indexOf(n - 1);
-    // return (index * (index + 1)) / 2;
+    return ((n + 1) * (n + 2)) / 2;
   } else {
     let term = 63;
     if (n === 11 || n === 16) {
@@ -110,6 +110,22 @@ export function sumOfFirst2(num) {
     return num - 1;
   }
 }
+
+export function first2SumOfGroup(num) {
+  let sequence = [];
+
+  for (let i = 1; i < 5; i++) {
+    sequence.push(i, i);
+  }
+  if (num === 9) {
+    return 5;
+  } else if (num < 9) {
+    return sequence[num - 1];
+  } else {
+    return sequence[8 - (num - 9)];
+  }
+}
+
 // 10 54 96 126 144 150 144 126 96 54
 // 10 18 16 14 12 10 8 6 4 2
 // generate a sequence of 10, 18, 16, 14, 12, 10, 8, 6, 4, 2

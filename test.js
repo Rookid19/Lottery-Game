@@ -1,14 +1,18 @@
-const obj = {
- 
-  arr1: [1, 2],
-  arr2: [1],
-  arr3: [1],
-  arr4: [1],
-  arr5: [1],
-};
+function generateSequence(num) {
+  let sequence = [];
 
-// function a() {
-//   arr1.length * arr2.length * arr3.length * arr4.length * arr5.length;
-// }
+  for (let i = 1; i < 5; i++) {
+    sequence.push(i, i);
+  }
+  if (num === 9) {
+    return 5;
+  } else if (num < 9) {
+    return sequence[num - 1];
+  } else {
+    return sequence[8 - (num - 9)];
+  }
+}
 
-console.log(Object.values(obj).reduce((acc, arr) => acc * arr.length,1));
+// Usage example
+const generatedSequence = generateSequence(15);
+console.log(generatedSequence);
