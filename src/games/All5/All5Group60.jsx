@@ -16,6 +16,7 @@ function All5Group60() {
     let counter = 0;
     row1Combination.forEach((number) => {
       row2Combination.forEach((value) => {
+        // console.log("value",value)
         if (!value.includes(number[0])) {
           counter++;
         }

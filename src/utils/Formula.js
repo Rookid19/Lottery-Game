@@ -68,11 +68,12 @@ export function generateSequence(n) {
   if (n < 10) {
     return ((n + 1) * (n + 2)) / 2;
   } else if (n > 17) {
-    const index = buttons
-      .slice(17, 28)
-      .reverse()
-      .indexOf(n - 1);
-    return (index * (index + 1)) / 2;
+    // n = 18 - n;
+    // const index = buttons
+    //   .slice(17, 28) // 17 - 27
+    //   .reverse()
+    //   .indexOf(n - 1);
+    // return (index * (index + 1)) / 2;
   } else {
     let term = 63;
     if (n === 11 || n === 16) {
@@ -94,6 +95,17 @@ export function span(num) {
   }
 }
 
+export function spanOfFirst2(num) {
+  if (num === 0) {
+    return 10 - num;
+  } else if (num > 0) {
+    return 18 + (num - 1) * -2;
+  }
+}
+// 10 54 96 126 144 150 144 126 96 54
+// 10 18 16 14 12 10 8 6 4 2
+// generate a sequence of 10, 18, 16, 14, 12, 10, 8, 6, 4, 2
+
 export function generateFirst3SumOfGroup(number) {
   const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   const ans = [];
@@ -112,12 +124,14 @@ export function pick2(array) {
   let count = 0;
 
   array.forEach((arr, index) => {
+    console.log(arr);
     arr.forEach(() => {
       if (index < array.length - 1) {
         count += array.slice(index + 1).flat().length;
+        console.log("count", array.slice(index + 1).flat());
       }
     });
   });
-  
+
   return count;
 }

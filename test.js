@@ -1,16 +1,14 @@
+const obj = {
+ 
+  arr1: [1, 2],
+  arr2: [1],
+  arr3: [1],
+  arr4: [1],
+  arr5: [1],
+};
 
-const getNumCombinations = (n, k) => {
-  // calculate the binomial coefficient
-  let numerator = 1;
-  for (let i = n; i > n - k; i--) {
-    numerator *= i;
-  }
-  let denominator = 1;
-  for (let i = 1; i <= k; i++) {
-    denominator *= i;
-  }
-  return numerator / denominator;
+// function a() {
+//   arr1.length * arr2.length * arr3.length * arr4.length * arr5.length;
+// }
 
-}
-
-console.log(getNumCombinations(5,3))
+console.log(Object.values(obj).reduce((acc, arr) => acc * arr.length,1));

@@ -15,6 +15,7 @@ function AllStraight5Joint() {
   } = useRow();
 
   const [bets, setBets] = useState("");
+  
   const results =
     firstArray.length *
     secondArray.length *

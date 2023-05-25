@@ -23,6 +23,7 @@ function Pick2Joint() {
     setBets(
       pick2([firstArray, secondArray, thirdArray, fourthArray, fifthArray])
     );
+    console.log([firstArray, secondArray, thirdArray, fourthArray, fifthArray])
   }, [onSelect]);
 
   return (
