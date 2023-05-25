@@ -97,9 +97,17 @@ export function span(num) {
 
 export function spanOfFirst2(num) {
   if (num === 0) {
-    return 10 - num;
+    return 10;
   } else if (num > 0) {
     return 18 + (num - 1) * -2;
+  }
+}
+
+export function sumOfFirst2(num) {
+  if (num < 10) {
+    return num + 1;
+  } else {
+    return num - 1;
   }
 }
 // 10 54 96 126 144 150 144 126 96 54
