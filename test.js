@@ -1,45 +1,117 @@
-// let array = {
-//   firstArray: [1],
-//   secondArray: [1],
-//   thirdArray: [1],
-//   fourthArray: [1],
-//   fifthArray: [1],
+// // let sen = "let's pad this sentence";
+
+// // let arr = sen.split(" ");
+
+// // let longest_sentence = arr.reduce((acc, curr) => Math.max(acc, curr.length), 0);
+
+// // // console.log("longest_sentence", longest_sentence);
+
+// // let new_sentence = arr.map((word) => {
+// //   let deduc = longest_sentence - word.length;
+// //   let second = Math.floor(deduc / 2);
+// //   let first = deduc - second;
+// //   return word.padStart(word.length + first, " ").padEnd(longest_sentence, " ");
+// // });
+
+// // // console.log(new_sentence.join(" "));
+
+// // // let a = "3";
+// // // console.log(a.repeat(100))
+// // // // a.concat(a)
+// // // // console.log([1,2,3].map((x) => "3").join(""))
+// // // console.log(Array(10).join("3"))
+// // // // for(let i =0, i<=)
+// // // //"333"
+
+// // // let a = [1,2,3]
+// // // console.log(a.with(2,4))
+
+// // // Array.prototype.with = function(index, element) {
+// // //   this.splice(index, 1, element);
+// // //   return this;
+// // // };
+
+// // // let a = [1, 2, 3];
+// // // a.with(1, 4);
+// // // console.log(a);
+// // let a = [1, 2, 3, 4, 5];
+// // a.copyWithin(1, 2); //[1,]
+
+// // console.log(a);
+
+// interface itemId {
+//   id : string;
+// }
+
+// interface Author extends itemId{
+//   name: string;
+//   age: number
+// }
+
+// interface Book extends itemId{
+//   title: string;
+//   pages:number;
+//   type: BookType
+// }
+
+// type BookType = 'romantic' | 'horror' | 'comedy'
+
+// function updateBookTitle(bookTitle){
+//   // return bookTitle;
+// console.log(bookTitle)
+// }
+
+// // const updateAuthor = (authorName) =>{
+// //   return authorName;
+// // }
+
+// type Person = {
+//   name: string;
+//   age: number;
+//   gender: string;
 // };
 
-// // console.log(Object.values(arr)[0].length);
+// const person: Omit<Person, "gender"> = {
+//   name: "John",
+//   age: 30,
+// };
 
-// // let a = Object.values(arr)[0].length;
+// type Person = {
+//   name: string;
+//   age: number;
+//   gender: string;
+// };
 
-// let b = Object.values(array).every(
-//   (arr) => !arr.includes(1) 
-// );
+// type PersonNameAndAge = Pick<Person, "name" | "age">;
 
-// console.log(b);
+// // const person: Person = {
+// //   name: "John",
+// //   age: 30,
+// // };
 
-// // if one of the rows is empty then it means i can add more balls
-// // else clear\
+// const a = (person): Object => {
+//   return {
+//     name: "John",
+//     age: 30,
+//   };
+// };
 
+// type Person = {
+//   name: string;
+//   age: number;
+//   gender: string;
+// };
 
-// const str = 'Hello';
-// const charArray = Array.from(str);
-// const numberArray = Array.from({ length: 15 }, (_, index) => index + 1);
-// // console.log(numberArray); // Output: [1, 2, 3, 4, 5]
+// function getPersonNameAndAge(person: Person): Omit<Person, "gender"> {
+//   return {
+//     name: person.name,
+//     age: person.age,
+//   };
+// }
 
+const arr = [123, 456,789,908];
+const matrix = arr.map((item) => Array.from(item, Number))
+console.log("matrix ", matrix)
+let transposeData = matrix[0]?.map((_, i) => matrix?.map((row) => row[i]));
 
-// const originalArray = [1, 2, 3, 4, 5];
-// const copyArray = Array.from(originalArray);
-// originalArray.push(6)
-// console.log(copyArray); // Output: [1, 2, 3, 4, 5]
-
-
-// const arr = ["1", "2", "3", "4", "3", "7"]
-
-const tasks = [
-  { id: 1, name: 'Task 1', completed: false },
-  { id: 2, name: 'Task 2', completed: true },
-  { id: 3, name: 'Task 3', completed: true },
-  { id: 4, name: 'Task 4', completed: true },
-  { id: 5, name: 'Task 5', completed: false }
-];
-
-
+console.log(transposeData);
