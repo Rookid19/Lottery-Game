@@ -109,9 +109,77 @@
 //   };
 // }
 
-const arr = [123, 456,789,908];
-const matrix = arr.map((item) => Array.from(item, Number))
-console.log("matrix ", matrix)
-let transposeData = matrix[0]?.map((_, i) => matrix?.map((row) => row[i]));
+// const arr = [123, 456,789,908];
+// const matrix = arr.map((item) => Array.from(item, Number))
+// console.log("matrix ", matrix)
+// let transposeData = matrix[0]?.map((_, i) => matrix?.map((row) => row[i]));
 
-console.log(transposeData);
+// console.log(transposeData);
+
+// const numbers = [123, 122, 111];
+// const splitNumber = numbers.map((number) => {
+//   let a = Array.from("" + number, Number);
+//   let count = 0;
+
+//   [1,2,3].reduce((acc, curr) => {
+//     // console.log(acc)
+//     if (acc >= curr) {
+//         console.log("curr" , curr)
+//         //acc++
+//     }
+//     // console.log("curr" , curr)
+//   }, 0);
+// });
+
+// console.log(splitNumber);
+
+const array = [1, 2, 3];
+
+function countOccurrences(array, numberOfOccurence) {
+  let count = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === numberOfOccurence) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+const result = countOccurrences(array, 2);
+// console.log(result); // Output: 2
+
+// function abc() {
+//   const numbers = [123, 122, 111, 133];
+//   let a;
+//   let targetIds = numbers.map((number, index) => {
+//     let array = Array.from("" + number, Number);
+//     let target = countOccurrences(array, 3);
+//     return target;
+//   });
+//   return targetIds;
+
+//   //   if (target === 2) {
+//   //     a = numbers.filter((_, i) => index === i);
+//   //   }
+// }
+
+// // console.log(abc());
+// const numbers = [123, 122, 111];
+
+// // Create a set.
+// const set = new Set(numbers);
+
+// // Iterate through the array and remove each number from the set.
+// for (const number of numbers) {
+//   set.delete(number);
+// }
+
+// // The only number that is left in the set is the repeating number.
+// const repeatingNumber = set.values().next().value;
+
+// // Print the value of the repeating number.
+// console.log(repeatingNumber);
+
+const arr =  [1,1,1]
